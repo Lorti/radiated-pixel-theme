@@ -28,7 +28,15 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content large-8 columns">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'rp' ) ); ?>
+		<?php
+			$content = get_the_content(__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'rp' ));
+			$content = apply_filters('the_content', $content);
+			$content = str_replace(']]>', ']]&gt;', $content);
+			// Needed for Foundation's subheader, so that it appears as a normal paragraph.
+			$content = preg_replace('/<h[1-6] class=\"subheader\">/', '<p>', $content); 
+			$content = preg_replace('/<h\/[1-6]>/', '<\/p>', $content); 
+			echo $content;
+		?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'rp' ), 'after' => '</div>' ) ); ?>
 		<a href="<?php the_permalink(); ?>" class="button show-for-small">Read Post...</a>
 	</div><!-- .entry-content -->
