@@ -36,17 +36,8 @@
 	</ul>
 
 	<section class="top-bar-section">
-		<?php 
-			wp_nav_menu( array(
-				'theme_location'  => 'primary',
-				'container'       => false,
-				'menu_class'      => 'left',
-				'after'           => '<li class="divider"></li>',
-				'items_wrap'      => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>'
-			) ); 
-		?>
-		<ul class="right">
-			<li class="divider"></li>
+		<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
+		<ul class="right"> 
 			<li><?php get_search_form(); ?></li>
 		</ul>
 	</section>

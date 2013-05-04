@@ -6,7 +6,7 @@
 $topbar-bg: #f7a82e;
 
 // Height and margin
-$topbar-height: remCalc(75px);
+$topbar-height: 75px;
 $topbar-margin-bottom: emCalc(30px) !default;
 
 // Control Input height for top bar
@@ -126,38 +126,33 @@ $topbar-media-query: "only screen and (min-width:"#{$topbar-breakpoint}")" !defa
     // Adding the class "menu-icon" will add the 3-line icon people love and adore.
     &.menu-icon {
       #{$opposite-direction}: $topbar-height / 3;
-      top: 50%;
-      margin-top: -16px;
       padding-#{$default-float}: 40px;
 
       a {
-        text-indent: -48px;
-        width: 34px;
-        height: 34px;
-        line-height: 33px;
+        width: $topbar-height;
+        height: $topbar-height;
+        line-height: $topbar-height;
         padding: 0;
         color: $topbar-menu-link-color;
+        background-color: $topbar-dropdown-bg;
 
         span {
           position: absolute;
-          #{$opposite-direction}: 0;
+          top: 50%;
+          #{$opposite-direction}: 50%;
           display: block;
-          width: 24px;
-          height: 0;
+          margin-top: -1px;
+          margin-#{$opposite-direction}: -10px;
+          width: 20px;
+          height: 2px;
+          background-color: $topbar-menu-icon-color;
           // Shh, don't tell, but box-shadows create the menu icon :)
-          -webkit-box-shadow: 0 8px  0 1px $topbar-menu-icon-color,
-                              0 10px 0 1px $topbar-menu-icon-color,
-                              0 15px 0 1px $topbar-menu-icon-color,
-                              0 17px 0 1px $topbar-menu-icon-color,
-                              0 22px 0 1px $topbar-menu-icon-color,
-                              0 24px 0 1px $topbar-menu-icon-color;
-
-          box-shadow:         0 8px  0 1px $topbar-menu-icon-color,
-                              0 10px 0 1px $topbar-menu-icon-color,
-                              0 15px 0 1px $topbar-menu-icon-color,
-                              0 17px 0 1px $topbar-menu-icon-color,
-                              0 22px 0 1px $topbar-menu-icon-color,
-                              0 24px 0 1px $topbar-menu-icon-color;
+          -webkit-box-shadow: 0 -6px 0 1px $topbar-menu-icon-color,
+                              0 0    0 1px $topbar-menu-icon-color,
+                              0 6px  0 1px $topbar-menu-icon-color;
+          box-shadow:         0 -6px 0 1px $topbar-menu-icon-color,
+                              0 0    0 1px $topbar-menu-icon-color,
+                              0 6px  0 1px $topbar-menu-icon-color;
         }
       }
     }
@@ -166,7 +161,7 @@ $topbar-media-query: "only screen and (min-width:"#{$topbar-breakpoint}")" !defa
   // Change things up when the top-bar is expanded
   &.expanded {
     height: auto;
-    background: transparent;
+    background-color: $topbar-dropdown-bg;
 
     .title-area { background: $topbar-bg; }
 
@@ -207,14 +202,14 @@ $topbar-media-query: "only screen and (min-width:"#{$topbar-breakpoint}")" !defa
   ul li {
     & > a {
       display: block;
-      width: 100%;
-      color: $topbar-link-color;
       padding: 12px 0 12px 0;
       padding-#{$default-float}: $topbar-height / 3;
-      font-size: $topbar-link-font-size;
-      font-weight: $topbar-link-weight;
+      width: 100%;
       background: $topbar-dropdown-bg;
-      height: $topbar-height;
+      color: $topbar-link-color;
+      font-weight: $topbar-link-weight;
+      font-size: $topbar-link-font-size;
+      line-height: $topbar-height / 2;
 
       &:hover { background: darken($topbar-dropdown-bg, 3%); }
 
@@ -456,32 +451,4 @@ $topbar-media-query: "only screen and (min-width:"#{$topbar-breakpoint}")" !defa
 
   }
 
-}
-
-
-
-/* ==========================================================================
-    RADIATED PIXEL
-   ========================================================================== */
-
-// The bars icon has also be changed, but directly in the code above!
-
-.top-bar .toggle-topbar.menu-icon {
-  right: 0;
-  margin-top: -$topbar-height / 2;
-  padding: 0 remCalc(15px);
-  a {
-    width: $topbar-height;
-    height: $topbar-height;
-    line-height: $topbar-height;
-    span {
-      right: 50%;
-      top: 50%;
-      margin-top: -16px;
-      margin-right: -12px;
-    }
-  }
-}
-.top-bar.expanded .toggle-topbar.menu-icon a {
-  background-color: $topbar-dropdown-bg;
 }

@@ -3540,8 +3540,8 @@ form.custom .custom.disabled {
 /* line 63, ../scss/foundation/components/_top-bar.scss */
 .top-bar {
   overflow: hidden;
-  height: 4.6875rem;
-  line-height: 4.6875rem;
+  height: 75px;
+  line-height: 75px;
   position: relative;
   background: #f7a82e;
   margin-bottom: 1.875em;
@@ -3576,13 +3576,13 @@ form.custom .custom.disabled {
 }
 /* line 89, ../scss/foundation/components/_top-bar.scss */
 .top-bar .name {
-  height: 4.6875rem;
+  height: 75px;
   margin: 0;
   font-size: 16px;
 }
 /* line 94, ../scss/foundation/components/_top-bar.scss */
 .top-bar .name h1 {
-  line-height: 4.6875rem;
+  line-height: 75px;
   font-size: 1.0625em;
   margin: 0;
 }
@@ -3592,7 +3592,7 @@ form.custom .custom.disabled {
   color: white;
   width: 50%;
   display: block;
-  padding: 0 1.5625rem;
+  padding: 0 25px;
 }
 /* line 109, ../scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar {
@@ -3608,51 +3608,53 @@ form.custom .custom.disabled {
   font-weight: bold;
   position: relative;
   display: block;
-  padding: 0 1.5625rem;
-  height: 4.6875rem;
-  line-height: 4.6875rem;
+  padding: 0 25px;
+  height: 75px;
+  line-height: 75px;
 }
 /* line 127, ../scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar.menu-icon {
-  right: 1.5625rem;
-  top: 50%;
-  margin-top: -16px;
+  right: 25px;
   padding-left: 40px;
 }
-/* line 133, ../scss/foundation/components/_top-bar.scss */
+/* line 131, ../scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar.menu-icon a {
-  text-indent: -48px;
-  width: 34px;
-  height: 34px;
-  line-height: 33px;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
   padding: 0;
   color: #feef74;
+  background-color: #eb8600;
 }
-/* line 141, ../scss/foundation/components/_top-bar.scss */
+/* line 139, ../scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar.menu-icon a span {
   position: absolute;
-  right: 0;
+  top: 50%;
+  right: 50%;
   display: block;
-  width: 24px;
-  height: 0;
-  -webkit-box-shadow: 0 8px 0 1px #feef74, 0 10px 0 1px #feef74, 0 15px 0 1px #feef74, 0 17px 0 1px #feef74, 0 22px 0 1px #feef74, 0 24px 0 1px #feef74;
-  box-shadow: 0 8px 0 1px #feef74, 0 10px 0 1px #feef74, 0 15px 0 1px #feef74, 0 17px 0 1px #feef74, 0 22px 0 1px #feef74, 0 24px 0 1px #feef74;
+  margin-top: -1px;
+  margin-right: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #feef74;
+  -webkit-box-shadow: 0 -6px 0 1px #feef74, 0 0 0 1px #feef74, 0 6px 0 1px #feef74;
+  box-shadow: 0 -6px 0 1px #feef74, 0 0 0 1px #feef74, 0 6px 0 1px #feef74;
 }
-/* line 167, ../scss/foundation/components/_top-bar.scss */
+/* line 162, ../scss/foundation/components/_top-bar.scss */
 .top-bar.expanded {
   height: auto;
-  background: transparent;
+  background-color: #eb8600;
 }
-/* line 171, ../scss/foundation/components/_top-bar.scss */
+/* line 166, ../scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .title-area {
   background: #f7a82e;
 }
-/* line 174, ../scss/foundation/components/_top-bar.scss */
+/* line 169, ../scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
   color: white;
 }
 
-/* line 183, ../scss/foundation/components/_top-bar.scss */
+/* line 178, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section {
   left: 0;
   position: relative;
@@ -3661,7 +3663,7 @@ form.custom .custom.disabled {
   -moz-transition: left 300ms ease-out;
   transition: left 300ms ease-out;
 }
-/* line 189, ../scss/foundation/components/_top-bar.scss */
+/* line 184, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul {
   width: 100%;
   height: auto;
@@ -3670,7 +3672,7 @@ form.custom .custom.disabled {
   font-size: 16px;
   margin: 0;
 }
-/* line 199, ../scss/foundation/components/_top-bar.scss */
+/* line 194, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .divider,
 .top-bar-section [role="separator"] {
   border-bottom: solid 1px #ff9f1f;
@@ -3679,68 +3681,68 @@ form.custom .custom.disabled {
   height: 1px;
   width: 100%;
 }
-/* line 208, ../scss/foundation/components/_top-bar.scss */
+/* line 203, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a {
   display: block;
-  width: 100%;
-  color: white;
   padding: 12px 0 12px 0;
-  padding-left: 1.5625rem;
-  font-size: 0.8125em;
-  font-weight: bold;
+  padding-left: 25px;
+  width: 100%;
   background: #eb8600;
-  height: 4.6875rem;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8125em;
+  line-height: 37.5px;
 }
-/* line 219, ../scss/foundation/components/_top-bar.scss */
+/* line 214, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a:hover {
   background: #dc7d00;
 }
-/* line 222, ../scss/foundation/components/_top-bar.scss */
+/* line 217, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
   background: #2ba6cb;
   font-size: 0.8125em;
 }
-/* line 225, ../scss/foundation/components/_top-bar.scss */
+/* line 220, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button:hover {
   background: #2284a1;
 }
-/* line 229, ../scss/foundation/components/_top-bar.scss */
+/* line 224, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.secondary {
   background: #e9e9e9;
 }
-/* line 231, ../scss/foundation/components/_top-bar.scss */
+/* line 226, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.secondary:hover {
   background: #d0d0d0;
 }
-/* line 235, ../scss/foundation/components/_top-bar.scss */
+/* line 230, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.success {
   background: #5da423;
 }
-/* line 237, ../scss/foundation/components/_top-bar.scss */
+/* line 232, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.success:hover {
   background: #457a1a;
 }
-/* line 241, ../scss/foundation/components/_top-bar.scss */
+/* line 236, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.alert {
   background: #c60f13;
 }
-/* line 243, ../scss/foundation/components/_top-bar.scss */
+/* line 238, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.alert:hover {
   background: #970b0e;
 }
-/* line 251, ../scss/foundation/components/_top-bar.scss */
+/* line 246, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a {
   background: #dc7d00;
 }
-/* line 255, ../scss/foundation/components/_top-bar.scss */
+/* line 250, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-form {
-  padding: 1.5625rem;
+  padding: 25px;
 }
-/* line 258, ../scss/foundation/components/_top-bar.scss */
+/* line 253, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-dropdown {
   position: relative;
 }
-/* line 262, ../scss/foundation/components/_top-bar.scss */
+/* line 257, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-dropdown > a:after {
   content: "";
   display: block;
@@ -3748,21 +3750,21 @@ form.custom .custom.disabled {
   height: 0;
   border: solid 5px;
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
-  margin-right: 1.5625rem;
+  margin-right: 25px;
   margin-top: -4.5px;
   position: absolute;
   top: 22px;
   right: 0;
 }
-/* line 272, ../scss/foundation/components/_top-bar.scss */
+/* line 267, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-dropdown.moved {
   position: static;
 }
-/* line 273, ../scss/foundation/components/_top-bar.scss */
+/* line 268, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-dropdown.moved > .dropdown {
   visibility: visible;
 }
-/* line 280, ../scss/foundation/components/_top-bar.scss */
+/* line 275, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown {
   position: absolute;
   left: 100%;
@@ -3770,28 +3772,28 @@ form.custom .custom.disabled {
   visibility: hidden;
   z-index: 99;
 }
-/* line 287, ../scss/foundation/components/_top-bar.scss */
+/* line 282, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li {
   width: 100%;
 }
-/* line 288, ../scss/foundation/components/_top-bar.scss */
+/* line 283, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li a {
   font-weight: normal;
-  padding: 8px 1.5625rem;
+  padding: 8px 25px;
 }
-/* line 293, ../scss/foundation/components/_top-bar.scss */
+/* line 288, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li.title h5 {
   margin-bottom: 0;
 }
-/* line 294, ../scss/foundation/components/_top-bar.scss */
+/* line 289, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li.title h5 a {
   color: white;
-  line-height: 2.34375rem;
+  line-height: 37.5px;
   display: block;
 }
-/* line 302, ../scss/foundation/components/_top-bar.scss */
+/* line 297, ../scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown label {
-  padding: 8px 1.5625rem 2px;
+  padding: 8px 25px 2px;
   margin-bottom: 0;
   text-transform: uppercase;
   color: #555555;
@@ -3799,19 +3801,19 @@ form.custom .custom.disabled {
   font-size: 0.625em;
 }
 
-/* line 314, ../scss/foundation/components/_top-bar.scss */
+/* line 309, ../scss/foundation/components/_top-bar.scss */
 .top-bar-js-breakpoint {
   width: 58.75em !important;
   visibility: hidden;
 }
 
-/* line 318, ../scss/foundation/components/_top-bar.scss */
+/* line 313, ../scss/foundation/components/_top-bar.scss */
 .js-generated {
   display: block;
 }
 
 @media only screen and (min-width: 58.75em) {
-  /* line 323, ../scss/foundation/components/_top-bar.scss */
+  /* line 318, ../scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: #f7a82e;
     *zoom: 1;
@@ -3826,19 +3828,19 @@ form.custom .custom.disabled {
   .top-bar:after {
     clear: both;
   }
-  /* line 324, ../scss/foundation/components/_top-bar.scss */
+  /* line 319, ../scss/foundation/components/_top-bar.scss */
   .top-bar .toggle-topbar {
     display: none;
   }
-  /* line 326, ../scss/foundation/components/_top-bar.scss */
+  /* line 321, ../scss/foundation/components/_top-bar.scss */
   .top-bar .title-area {
     float: left;
   }
-  /* line 327, ../scss/foundation/components/_top-bar.scss */
+  /* line 322, ../scss/foundation/components/_top-bar.scss */
   .top-bar .name h1 a {
     width: auto;
   }
-  /* line 330, ../scss/foundation/components/_top-bar.scss */
+  /* line 325, ../scss/foundation/components/_top-bar.scss */
   .top-bar input,
   .top-bar .button {
     line-height: 2em;
@@ -3848,54 +3850,54 @@ form.custom .custom.disabled {
     position: relative;
     top: 8px;
   }
-  /* line 339, ../scss/foundation/components/_top-bar.scss */
+  /* line 334, ../scss/foundation/components/_top-bar.scss */
   .top-bar.expanded {
     background: #f7a82e;
   }
 
-  /* line 342, ../scss/foundation/components/_top-bar.scss */
+  /* line 337, ../scss/foundation/components/_top-bar.scss */
   .contain-to-grid .top-bar {
     max-width: 62.5em;
     margin: 0 auto;
     margin-bottom: 1.875em;
   }
 
-  /* line 344, ../scss/foundation/components/_top-bar.scss */
+  /* line 339, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section {
     -webkit-transition: none 0 0;
     -moz-transition: none 0 0;
     transition: none 0 0;
     left: 0 !important;
   }
-  /* line 348, ../scss/foundation/components/_top-bar.scss */
+  /* line 343, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section ul {
     width: auto;
     height: auto !important;
     display: inline;
   }
-  /* line 353, ../scss/foundation/components/_top-bar.scss */
+  /* line 348, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section ul li {
     float: left;
   }
-  /* line 355, ../scss/foundation/components/_top-bar.scss */
+  /* line 350, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section ul li .js-generated {
     display: none;
   }
-  /* line 360, ../scss/foundation/components/_top-bar.scss */
+  /* line 355, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section li a:not(.button) {
-    padding: 0 1.5625rem;
-    line-height: 4.6875rem;
+    padding: 0 25px;
+    line-height: 75px;
     background: #f7a82e;
   }
-  /* line 364, ../scss/foundation/components/_top-bar.scss */
+  /* line 359, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section li a:not(.button):hover {
     background: #d27700;
   }
-  /* line 369, ../scss/foundation/components/_top-bar.scss */
+  /* line 364, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown > a {
     padding-right: 35px !important;
   }
-  /* line 372, ../scss/foundation/components/_top-bar.scss */
+  /* line 367, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown > a:after {
     content: "";
     display: block;
@@ -3905,104 +3907,76 @@ form.custom .custom.disabled {
     border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
     margin-top: -2.5px;
   }
-  /* line 378, ../scss/foundation/components/_top-bar.scss */
+  /* line 373, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown.moved {
     position: relative;
   }
-  /* line 379, ../scss/foundation/components/_top-bar.scss */
+  /* line 374, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown.moved > .dropdown {
     visibility: hidden;
   }
-  /* line 384, ../scss/foundation/components/_top-bar.scss */
+  /* line 379, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown:hover > .dropdown, .top-bar-section .has-dropdown:active > .dropdown {
     visibility: visible;
   }
-  /* line 391, ../scss/foundation/components/_top-bar.scss */
+  /* line 386, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
     border: none;
     content: "\00bb";
     margin-top: -7px;
     right: 5px;
   }
-  /* line 402, ../scss/foundation/components/_top-bar.scss */
+  /* line 397, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown {
     left: 0;
     top: auto;
     background: transparent;
     min-width: 100%;
   }
-  /* line 409, ../scss/foundation/components/_top-bar.scss */
+  /* line 404, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li a {
     color: #feef74;
     line-height: 1;
     white-space: nowrap;
-    padding: 7px 1.5625rem;
+    padding: 7px 25px;
     background: #f8b247;
   }
-  /* line 417, ../scss/foundation/components/_top-bar.scss */
+  /* line 412, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li label {
     white-space: nowrap;
     background: #f8b247;
   }
-  /* line 423, ../scss/foundation/components/_top-bar.scss */
+  /* line 418, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .dropdown li .dropdown {
     left: 100%;
     top: 0;
   }
-  /* line 431, ../scss/foundation/components/_top-bar.scss */
+  /* line 426, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
     border-bottom: none;
     border-top: none;
     border-right: solid 1px #f9bc5f;
     border-left: solid 1px #e99109;
     clear: none;
-    height: 4.6875rem;
+    height: 75px;
     width: 0px;
   }
-  /* line 441, ../scss/foundation/components/_top-bar.scss */
+  /* line 436, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
     background: #f7a82e;
-    padding: 0 1.5625rem;
-    height: 4.6875rem;
+    padding: 0 25px;
+    height: 75px;
   }
-  /* line 449, ../scss/foundation/components/_top-bar.scss */
+  /* line 444, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section ul.right li .dropdown {
     left: auto;
     right: 0;
   }
-  /* line 453, ../scss/foundation/components/_top-bar.scss */
+  /* line 448, ../scss/foundation/components/_top-bar.scss */
   .top-bar-section ul.right li .dropdown li .dropdown {
     right: 100%;
   }
 }
-/* ==========================================================================
-    RADIATED PIXEL
-   ========================================================================== */
-/* line 469, ../scss/foundation/components/_top-bar.scss */
-.top-bar .toggle-topbar.menu-icon {
-  right: 0;
-  margin-top: -2.34375rem;
-  padding: 0 0.9375rem;
-}
-/* line 473, ../scss/foundation/components/_top-bar.scss */
-.top-bar .toggle-topbar.menu-icon a {
-  width: 4.6875rem;
-  height: 4.6875rem;
-  line-height: 4.6875rem;
-}
-/* line 477, ../scss/foundation/components/_top-bar.scss */
-.top-bar .toggle-topbar.menu-icon a span {
-  right: 50%;
-  top: 50%;
-  margin-top: -16px;
-  margin-right: -12px;
-}
-
-/* line 485, ../scss/foundation/components/_top-bar.scss */
-.top-bar.expanded .toggle-topbar.menu-icon a {
-  background-color: #eb8600;
-}
-
 /* line 31, ../../../../../../../Library/Ruby/Gems/1.8/gems/zurb-foundation-4.1.2/scss/foundation/components/_orbit.scss */
 .orbit-container {
   overflow: hidden;
