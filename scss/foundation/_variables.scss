@@ -23,8 +23,8 @@ $em-base: 16px !default;
 
 //// Various global styles
 
-// $body-bg: #fff;
-// $body-font-color: #222;
+$body-bg: #31353a;
+$body-font-color: #fff;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -39,7 +39,7 @@ $em-base: 16px !default;
 
 //// Colors
 
-// $primary-color: #2ba6cb;
+$primary-color: #f7a82e;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
@@ -116,9 +116,9 @@ $em-base: 16px !default;
 /* ======== Foundation Variables ======== */
 
 $header-font-family:  "Function Pro Light", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $header-font-weight: bold;
-// $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-weight: normal;
+$header-font-style: normal;
+$header-font-color: #f7a82e;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -1106,8 +1106,8 @@ $paragraph-font-family: "Maven Pro Regular", "Helvetica Neue", "Helvetica", Helv
 // $thumb-border-style: solid;
 // $thumb-border-width: 4px;
 // $thumb-border-color: #fff;
-// $thumb-box-shadow: 0 0 0 1px rgba(#000,.2);
-// $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+$thumb-box-shadow: none;
+$thumb-box-shadow-hover: 0 0 6px 1px $primary-color;
 
 //// Radius and transition speed for thumbs
 
