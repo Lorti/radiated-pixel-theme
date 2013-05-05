@@ -17,20 +17,35 @@
 <?php wp_head(); ?>
 </head>
 
+<!-- =======================================================================
+	 Theme for Radiated Pixel by Manuel Wieser
+	 office@manuelwieser.com
+	 http://www.radiatedpixel.com/
+	 https://github.com/lorti/radiated-pixel-theme
+	 ======================================================================= -->
+
 <body <?php body_class(); ?>>
 
-<ul class="rp-teaser-banner small-block-grid-3 large-block-grid-5 large-12 columns">
-  <li><a><img src="http://placekitten.com/400/250"></a></li>
-  <li><a><img src="http://placekitten.com/400/250"></a></li>
-  <li><a><img src="http://placekitten.com/400/250"></a></li>
-  <li><a><img src="http://placekitten.com/400/250" class="hide-for-small"></a></li>
-  <li><a><img src="http://placekitten.com/400/250" class="hide-for-small"></a></li>
+<ul class="small-block-grid-3 large-block-grid-5 block-grid--featured">
+<?php $fQuery = new WP_Query('tag=Featured&posts_per_page=5'); ?>
+<?php $fIndex = 0; ?>
+<?php while ($fQuery->have_posts()) : $fQuery->the_post(); ?>
+	<li<?php if ($fIndex > 2) echo ' class="hide-for-small"'; ?>>
+  		<a href="<?php the_permalink(); ?>">
+  			<img class="block-grid--featured__fallback-image" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="Thumbnail">
+  			<div class="block-grid--featured__cropped-image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>);"></div>
+  		</a>
+	</li>
+	<?php $fIndex++; ?>
+<?php endwhile;?>
 </ul>
 
-<nav class="top-bar" role="navigation">
+<nav class="top-bar top-bar--radiated-pixel" role="navigation">
 	<ul class="title-area">
 	  <li class="name">
-	    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
+	    	   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" 
+	    	   rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	  </li>
 	  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 	</ul>
@@ -41,21 +56,11 @@
 			<li><?php get_search_form(); ?></li>
 		</ul>
 	</section>
-
 </nav>
 
 <!-- microformats.org/wiki/hatom -->
 <div id="page" class="hfeed">
 
 	<?php do_action( 'before' ); ?>
-<!-- 	
-	<header class="row" role="banner">
-		<div class="large-12 columns">
-			<h1>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				<small><?php bloginfo( 'description' ); ?></small>
-			</h1>
-		</div>
-	</header>
- -->
+
 	<div id="main" class="row">

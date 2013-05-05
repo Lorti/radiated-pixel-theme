@@ -1,0 +1,46 @@
+/* ==========================================================================
+    TOP BAR
+    Radiated Pixel Modifiers
+   ========================================================================== */
+
+.top-bar--radiated-pixel {
+
+  .toggle-topbar.menu-icon {
+    top: 0;
+    margin-top: 0;
+
+    a {
+      width: $topbar-height;
+      height: $topbar-height;
+      line-height: $topbar-height;
+      background-color: $topbar-dropdown-bg;
+
+      span {
+        top: 50%;
+        #{$opposite-direction}: 50%;
+        margin-top: -1px;
+        margin-#{$opposite-direction}: -10px;
+        width: 20px;
+        height: 2px;
+        background-color: $topbar-menu-icon-color;
+        // Shh, don't tell, but box-shadows create the menu icon :)
+        -webkit-box-shadow: 0 -6px 0 1px $topbar-menu-icon-color,
+                            0 0    0 1px $topbar-menu-icon-color,
+                            0 6px  0 1px $topbar-menu-icon-color;
+        box-shadow:         0 -6px 0 1px $topbar-menu-icon-color,
+                            0 0    0 1px $topbar-menu-icon-color,
+                            0 6px  0 1px $topbar-menu-icon-color;
+      }
+    }
+  }
+
+  &.expanded {
+    background-color: $topbar-dropdown-bg;
+
+    .toggle-topbar {
+      // The icon should stay the same.
+      a { color: $topbar-menu-link-color-toggled; }
+    }
+  }
+
+}
