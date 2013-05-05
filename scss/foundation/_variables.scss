@@ -113,8 +113,9 @@ $em-base: 16px !default;
 //
 
 //// Heading font styles
+/* ======== Foundation Variables ======== */
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family:  "Function Pro Light", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
@@ -147,7 +148,7 @@ $em-base: 16px !default;
 
 //// Paragraphs
 
-// $paragraph-font-family: inherit;
+$paragraph-font-family: "Maven Pro Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $paragraph-font-weight: normal;
 // $paragraph-font-size: 1em;
 // $paragraph-line-height: 1.6;

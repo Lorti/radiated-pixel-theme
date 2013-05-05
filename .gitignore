@@ -25,6 +25,21 @@
 *.sql
 *.sqlite
 
+# Fonts #
+#############################
+fontello.eot
+fontello.svg
+fontello.ttf
+fontello.woff
+function-pro-light.eot
+function-pro-light.svg
+function-pro-light.ttf
+function-pro-light.woff
+maven-pro-regular.eot
+maven-pro-regular.svg
+maven-pro-regular.ttf
+maven-pro-regular.woff
+
 # OS #
 ######################
 .DS_Store

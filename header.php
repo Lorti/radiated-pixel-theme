@@ -43,16 +43,21 @@
 <nav class="top-bar top-bar--radiated-pixel" role="navigation">
 	<ul class="title-area">
 	  <li class="name">
-	    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
-	    	   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" 
+	    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+	    	   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
 	    	   rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	  </li>
 	  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 	</ul>
 
 	<section class="top-bar-section">
-		<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
-		<ul class="right"> 
+		<?php wp_nav_menu(array(
+				'theme_location' => 'primary',
+				'container' 		 => false,
+				'after'          => '<li class="divider"></li>',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>'
+		)); ?>
+		<ul class="right">
 			<li><?php get_search_form(); ?></li>
 		</ul>
 	</section>
