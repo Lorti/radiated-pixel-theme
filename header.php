@@ -55,7 +55,9 @@
 				'theme_location' => 'primary',
 				'container' 		 => false,
 				'after'          => '<li class="divider"></li>',
-				'items_wrap'     => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>'
+				'items_wrap'     => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>',
+				'depth'          => '-1'
+
 		)); ?>
 		<ul class="right">
 			<li><?php get_search_form(); ?></li>
