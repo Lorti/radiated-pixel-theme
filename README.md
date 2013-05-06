@@ -13,9 +13,9 @@ It makes use of [Sass](http://sass-lang.com/) and the [BEM](http://bem.info/meth
 How can I contribute?
 ---------------------
 
-1. If you are on Windows you may have to install [Ruby](http://www.ruby-lang.org/). The easiest way to do so is with the help of http://rubyinstaller.org/.
+1. If you are on Windows you may have to install Ruby. The easiest way to do so is with the help of http://rubyinstaller.org/.
 
-2. Fire up a command line and install the [Foundation](http://foundation.zurb.com/) framework and [Compass](http://compass-style.org/).
+2. Fire up a command line and install Foundation and [Compass](http://compass-style.org/).
 
         gem install zurb-foundation
         gem install compass
