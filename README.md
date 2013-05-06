@@ -1,7 +1,7 @@
 Radiated Pixel Theme
 ====================
 
-This is the WordPress theme for http://www.radiatedpixel.com/.
+The WordPress Theme for http://www.radiatedpixel.com/.
 
 What is this theme made of?
 ---------------------------
@@ -26,3 +26,8 @@ How can I contribute?
         compass watch
         
 5. Code to your heart's content and when you're done please make a pull request ;)
+
+Where are the fonts?
+--------------------
+
+If you're interested in the fonts you can download [Maven Pro](http://vissol.co.uk/mavenpro/) for free. A license for [Function Pro](http://www.fontspring.com/fonts/fontsite/function-pro) can be obtained from Fontspring.
