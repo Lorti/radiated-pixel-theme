@@ -3,8 +3,8 @@ Radiated Pixel Theme
 
 This is the WordPress theme for http://www.radiatedpixel.com/.
 
-How is this theme build?
-------------------------
+What is this theme made of?
+---------------------------
 
 This theme is build upon the [Foundation](http://foundation.zurb.com/) framework and the [_s](http://underscores.me) starter theme. 
 
