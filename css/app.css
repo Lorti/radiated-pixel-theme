@@ -5858,15 +5858,17 @@ a.th {
 }
 /* line 10, ../scss/foundation/components/_rp-block-grid.scss */
 .block-grid--featured .block-grid--featured__fallback-image {
+  margin: 0;
   display: block;
 }
 
-/* line 14, ../scss/foundation/components/_rp-block-grid.scss */
+/* line 17, ../scss/foundation/components/_rp-block-grid.scss */
 .backgroundsize .block-grid--featured__fallback-image {
   display: none;
 }
-/* line 15, ../scss/foundation/components/_rp-block-grid.scss */
+/* line 18, ../scss/foundation/components/_rp-block-grid.scss */
 .backgroundsize .block-grid--featured__cropped-image {
+  margin: 0;
   padding-top: 66.667%;
   background-size: cover;
   background-position: center;
@@ -5888,13 +5890,14 @@ a.th {
 /* line 23, ../scss/foundation/components/_rp-type.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before,
-.font-icon {
+.top-bar--radiated-pixel .top-bar--radiated-pixel__search:after {
   display: inline-block;
   margin-right: 0.2em;
   margin-left: 0.2em;
   width: 1em;
   text-align: center;
   text-decoration: inherit;
+  font-size: inherit;
   font-weight: normal;
   font-style: normal;
   font-family: 'fontello', Wingdings;
@@ -5903,20 +5906,19 @@ a.th {
   speak: none;
 }
 
-/* line 37, ../scss/foundation/components/_rp-type.scss */
+/* line 38, ../scss/foundation/components/_rp-type.scss */
 .icon-right-thin:before {
   content: '\6f';
 }
 
 /* 'o' */
-/* line 38, ../scss/foundation/components/_rp-type.scss */
+/* line 39, ../scss/foundation/components/_rp-type.scss */
 .icon-home:before {
   content: '\66';
 }
 
 /* 'f' */
 /* line 40, ../scss/foundation/components/_rp-type.scss */
-.font-icon-menu,
 .icon-menu:before {
   content: '\65';
 }
@@ -5928,74 +5930,74 @@ a.th {
 }
 
 /* 'b' */
-/* line 43, ../scss/foundation/components/_rp-type.scss */
-.font-icon-right,
+/* line 42, ../scss/foundation/components/_rp-type.scss */
 .icon-right:before {
   content: '\6d';
 }
 
 /* 'm' */
-/* line 44, ../scss/foundation/components/_rp-type.scss */
+/* line 43, ../scss/foundation/components/_rp-type.scss */
 .icon-right-bold:before {
   content: '\6e';
 }
 
 /* 'n' */
-/* line 45, ../scss/foundation/components/_rp-type.scss */
+/* line 44, ../scss/foundation/components/_rp-type.scss */
 .icon-tag:before {
   content: '\67';
 }
 
 /* 'g' */
-/* line 46, ../scss/foundation/components/_rp-type.scss */
+/* line 45, ../scss/foundation/components/_rp-type.scss */
 .icon-chat:before {
   content: '\69';
 }
 
 /* 'i' */
-/* line 47, ../scss/foundation/components/_rp-type.scss */
+/* line 46, ../scss/foundation/components/_rp-type.scss */
 .icon-rss:before {
   content: '\6a';
 }
 
 /* 'j' */
-/* line 48, ../scss/foundation/components/_rp-type.scss */
+/* line 47, ../scss/foundation/components/_rp-type.scss */
 .icon-twitter:before {
   content: '\70';
 }
 
 /* 'p' */
-/* line 49, ../scss/foundation/components/_rp-type.scss */
+/* line 48, ../scss/foundation/components/_rp-type.scss */
 .icon-facebook-squared:before {
   content: '\71';
 }
 
 /* 'q' */
-/* line 50, ../scss/foundation/components/_rp-type.scss */
+/* line 49, ../scss/foundation/components/_rp-type.scss */
 .icon-flattr:before {
   content: '\72';
 }
 
 /* 'r' */
-/* line 51, ../scss/foundation/components/_rp-type.scss */
+/* line 50, ../scss/foundation/components/_rp-type.scss */
 .icon-user:before {
   content: '\63';
 }
 
 /* 'c' */
-/* line 52, ../scss/foundation/components/_rp-type.scss */
+/* line 51, ../scss/foundation/components/_rp-type.scss */
 .icon-users:before {
   content: '\64';
 }
 
 /* 'd' */
-/* line 53, ../scss/foundation/components/_rp-type.scss */
+/* line 52, ../scss/foundation/components/_rp-type.scss */
 .icon-calendar:before {
   content: '\6b';
 }
 
 /* 'k' */
 /* line 54, ../scss/foundation/components/_rp-type.scss */
+.top-bar--radiated-pixel .top-bar--radiated-pixel__search:after,
 .icon-search:before {
   content: '\61';
 }
@@ -6029,19 +6031,43 @@ a.th {
     TOP BAR
     Radiated Pixel Modifiers
    ========================================================================== */
-/* line 8, ../scss/foundation/components/_rp-top-bar.scss */
+/* line 14, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel {
+  /* ======== LOGO ======== */
+  /* ======== MENU ICON ======== */
+  /* ======== SEARCH ======== */
+}
+/* line 17, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .name h1 a {
+  padding-top: 10px;
+}
+/* line 19, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .top-bar--radiated-pixel__logo-svg,
+.top-bar--radiated-pixel .top-bar--radiated-pixel__logo-png {
+  height: 55px;
+  vertical-align: top;
+}
+/* line 24, ../scss/foundation/components/_rp-top-bar.scss */
+.no-svg .top-bar--radiated-pixel .top-bar--radiated-pixel__logo-svg {
+  display: none;
+}
+/* line 25, ../scss/foundation/components/_rp-top-bar.scss */
+.svg .top-bar--radiated-pixel .top-bar--radiated-pixel__logo-png {
+  display: none;
+}
+/* line 28, ../scss/foundation/components/_rp-top-bar.scss */
 .top-bar--radiated-pixel .toggle-topbar.menu-icon {
   top: 0;
   margin-top: 0;
 }
-/* line 12, ../scss/foundation/components/_rp-top-bar.scss */
+/* line 32, ../scss/foundation/components/_rp-top-bar.scss */
 .top-bar--radiated-pixel .toggle-topbar.menu-icon a {
   width: 75px;
   height: 75px;
   line-height: 75px;
   background-color: #eb8600;
 }
-/* line 18, ../scss/foundation/components/_rp-top-bar.scss */
+/* line 38, ../scss/foundation/components/_rp-top-bar.scss */
 .top-bar--radiated-pixel .toggle-topbar.menu-icon a span {
   top: 50%;
   right: 50%;
@@ -6053,11 +6079,97 @@ a.th {
   -webkit-box-shadow: 0 -6px 0 1px #feef74, 0 0 0 1px #feef74, 0 6px 0 1px #feef74;
   box-shadow: 0 -6px 0 1px #feef74, 0 0 0 1px #feef74, 0 6px 0 1px #feef74;
 }
-/* line 37, ../scss/foundation/components/_rp-top-bar.scss */
+/* line 57, ../scss/foundation/components/_rp-top-bar.scss */
 .top-bar--radiated-pixel.expanded {
   background-color: #eb8600;
 }
-/* line 42, ../scss/foundation/components/_rp-top-bar.scss */
+/* line 62, ../scss/foundation/components/_rp-top-bar.scss */
 .top-bar--radiated-pixel.expanded .toggle-topbar a {
   color: white;
+}
+/* line 67, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .top-bar--radiated-pixel__search {
+  position: relative;
+}
+/* line 69, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .top-bar--radiated-pixel__search:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: 0 -1px 0 #ca6900;
+  color: #ffc64c;
+  right: 0;
+}
+/* line 83, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field, .top-bar--radiated-pixel .search-form__field:focus {
+  top: 0;
+  background: #eb8600;
+  color: #ffc64c;
+  border: none;
+  padding-right: 20px;
+  -webkit-box-shadow: inset 0 1px 0 #ca6900, inset 0 -1px 0 #ffc64c;
+  -moz-box-shadow: inset 0 1px 0 #ca6900, inset 0 -1px 0 #ffc64c;
+  box-shadow: inset 0 1px 0 #ca6900, inset 0 -1px 0 #ffc64c;
+}
+/* line 90, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field::-webkit-input-placeholder, .top-bar--radiated-pixel .search-form__field:focus::-webkit-input-placeholder {
+  color: #ffc64c;
+}
+/* line 91, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field:-moz-placeholder {
+  color: #ffc64c;
+}
+/* line 92, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field::-moz-placeholder, .top-bar--radiated-pixel .search-form__field:focus::-moz-placeholder {
+  color: #ffc64c;
+}
+/* line 93, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field:-ms-input-placeholder {
+  color: #ffc64c;
+}
+/* line 98, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field:focus::-webkit-input-placeholder {
+  color: #eb8600;
+}
+/* line 99, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field:focus:-moz-placeholder {
+  color: #eb8600;
+}
+/* line 100, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field:focus::-moz-placeholder {
+  color: #eb8600;
+}
+/* line 101, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__field:focus:-ms-input-placeholder {
+  color: #eb8600;
+}
+/* line 105, ../scss/foundation/components/_rp-top-bar.scss */
+.top-bar--radiated-pixel .search-form__screen-reader-text,
+.top-bar--radiated-pixel .search_form__submit {
+  display: none;
+}
+
+/* ==========================================================================
+    TOP BAR
+    Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 58.75em) {
+  /* line 116, ../scss/foundation/components/_rp-top-bar.scss */
+  .top-bar--radiated-pixel {
+    /* ======== SEARCH ======== */
+  }
+  /* line 120, ../scss/foundation/components/_rp-top-bar.scss */
+  .top-bar--radiated-pixel .top-bar--radiated-pixel__search:after {
+    right: 25px;
+  }
+  /* line 124, ../scss/foundation/components/_rp-top-bar.scss */
+  .top-bar--radiated-pixel .search-form {
+    padding-right: 25px;
+    background: #f7a82e;
+    height: 75px;
+    display: table-cell;
+    vertical-align: middle;
+  }
 }

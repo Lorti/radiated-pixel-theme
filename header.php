@@ -43,9 +43,14 @@
 <nav class="top-bar top-bar--radiated-pixel" role="navigation">
 	<ul class="title-area">
 	  <li class="name">
-	    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+	    <h1>
+	    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
 	    	   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-	    	   rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	    	   rel="home">
+		    	<img class="top-bar--radiated-pixel__logo-svg" src="<?php echo get_template_directory_uri(); ?>/img/radiated-pixel-white.svg" alt="Radiated Pixel">
+		    	<img class="top-bar--radiated-pixel__logo-png" src="<?php echo get_template_directory_uri(); ?>/img/radiated-pixel-white.png" alt="Radiated Pixel">
+	    	</a>
+	    </h1>
 	  </li>
 	  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 	</ul>
@@ -60,7 +65,7 @@
 
 		)); ?>
 		<ul class="right">
-			<li><?php get_search_form(); ?></li>
+			<li class="top-bar--radiated-pixel__search"><?php get_search_form(); ?></li>
 		</ul>
 	</section>
 </nav>
