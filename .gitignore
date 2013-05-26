@@ -18,6 +18,10 @@
 *.tar
 *.zip
 
+# Node #
+############
+node_modules/
+
 # Cache, Logs and Databases #
 #############################
 *.scssc
