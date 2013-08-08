@@ -30,4 +30,4 @@ How can I contribute?
 Where are the fonts?
 --------------------
 
-If you're interested in the fonts you can download [Maven Pro](http://vissol.co.uk/mavenpro/) for free. A license for [Function Pro](http://www.fontspring.com/fonts/fontsite/function-pro) can be obtained from Fontspring.
+If you're interested in the fonts you can download [Maven Pro](http://vissol.co.uk/mavenpro/) for free. A license for [Function Pro](http://www.fontspring.com/fonts/fontsite/function-pro) can be obtained from Fontspring. The icon font can be created on http://www.fontello.com/ with the `config.json` file found on the fonts folder.
