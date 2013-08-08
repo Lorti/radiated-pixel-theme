@@ -1,0 +1,230 @@
+{
+  "name": "icons",
+  "glyphs": [
+    {
+      "search": [
+        "minus",
+        "collapse"
+      ],
+      "code": 104,
+      "uid": "4ffa544c1a81c905f0a8a5745d8b9faa",
+      "css": "minus-squared",
+      "orig_css": "minus-squared",
+      "orig_code": 104,
+      "src": "entypo",
+      "from": 8863
+    },
+    {
+      "search": [
+        "menu",
+        "list"
+      ],
+      "code": 98,
+      "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
+      "css": "menu",
+      "orig_css": "menu",
+      "orig_code": 98,
+      "src": "entypo",
+      "from": 9776
+    },
+    {
+      "search": [
+        "ok",
+        true,
+        "check",
+        "mark"
+      ],
+      "code": 99,
+      "uid": "14017aae737730faeda4a6fd8fb3a5f0",
+      "css": "check",
+      "orig_css": "check",
+      "orig_code": 99,
+      "src": "entypo",
+      "from": 10003
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 100,
+      "from": 10005,
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "orig_css": "cancel",
+      "orig_code": 100,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 101,
+      "uid": "c759418c008e9562944080fee617fc76",
+      "css": "cancel-circled",
+      "orig_css": "cancel-circled",
+      "orig_code": 101,
+      "src": "entypo",
+      "from": 10006
+    },
+    {
+      "search": [
+        "close",
+        "cancel",
+        "reject"
+      ],
+      "code": 102,
+      "uid": "bf45c39702763f1803b550c36a0ceb12",
+      "css": "cancel-squared",
+      "orig_css": "cancel-squared",
+      "orig_code": 102,
+      "src": "entypo",
+      "from": 10062
+    },
+    {
+      "search": [
+        "minus"
+      ],
+      "code": 103,
+      "from": 10134,
+      "uid": "3eb93689881ad0804f87052a53edc2b6",
+      "css": "minus-circled",
+      "orig_css": "minus-circled",
+      "orig_code": 103,
+      "src": "entypo"
+    },
+    {
+      "search": [
+        "tag",
+        "price",
+        "offer"
+      ],
+      "code": 106,
+      "uid": "875ab0f6d417223f6ec76ff7f0a4baed",
+      "css": "tag",
+      "orig_css": "tag",
+      "orig_code": 106,
+      "src": "entypo",
+      "from": 59148
+    },
+    {
+      "search": [
+        "comment",
+        "reply",
+        "write"
+      ],
+      "code": 109,
+      "uid": "16890362e811b4cb8de36282b071fe30",
+      "css": "comment",
+      "orig_css": "comment",
+      "orig_code": 109,
+      "src": "entypo",
+      "from": 59160
+    },
+    {
+      "search": [
+        "chat",
+        "talk"
+      ],
+      "code": 59168,
+      "uid": "2c0b53280f82068f6bab4e2200025d9f",
+      "css": "comments",
+      "orig_css": "chat",
+      "orig_code": 0,
+      "src": "entypo",
+      "from": 59168
+    },
+    {
+      "search": [
+        "rss"
+      ],
+      "code": 111,
+      "uid": "3e617d8049807e128c80d0344ba09e37",
+      "css": "rss",
+      "orig_css": "rss",
+      "orig_code": 111,
+      "src": "entypo",
+      "from": 59194
+    },
+    {
+      "search": [
+        "twitter",
+        "social",
+        "logo"
+      ],
+      "code": 113,
+      "uid": "d090355c31f497b61d676416c1fd39fb",
+      "css": "twitter",
+      "orig_css": "twitter",
+      "orig_code": 113,
+      "src": "entypo",
+      "from": 62217
+    },
+    {
+      "search": [
+        "calendar",
+        "date"
+      ],
+      "code": 112,
+      "uid": "413717f5ea649e8d8b93938be277264a",
+      "css": "calendar",
+      "orig_css": "calendar",
+      "orig_code": 112,
+      "src": "entypo",
+      "from": 128197
+    },
+    {
+      "search": [
+        "bookmarks"
+      ],
+      "code": 108,
+      "uid": "8538a2249db7f07ae75411886732fb87",
+      "css": "category",
+      "orig_css": "bookmarks",
+      "orig_code": 108,
+      "src": "entypo",
+      "from": 128209
+    },
+    {
+      "search": [
+        "search",
+        "find"
+      ],
+      "code": 97,
+      "uid": "7222571caa5c15f83dcfd447c58d68d9",
+      "css": "search",
+      "orig_css": "search",
+      "orig_code": 97,
+      "src": "entypo",
+      "from": 128269
+    },
+    {
+      "search": [
+        "bookmark"
+      ],
+      "code": 107,
+      "uid": "23912d5623126e14b7b137c3ba557168",
+      "css": "bookmark",
+      "orig_css": "bookmark",
+      "orig_code": 107,
+      "src": "entypo",
+      "from": 128278
+    },
+    {
+      "search": [
+        "link",
+        "url"
+      ],
+      "code": 105,
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "orig_css": "link",
+      "orig_code": 105,
+      "src": "entypo",
+      "from": 128279
+    }
+  ]
+}
