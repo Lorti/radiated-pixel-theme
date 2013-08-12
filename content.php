@@ -17,7 +17,7 @@
 
 	<div class="large-4 columns">
 		<a class="th" href="<?php the_permalink(); ?>">
-			<img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" width="100%" alt="Thumbnail"></a>
+			<img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail')[0] ?>" width="100%" alt="Thumbnail"></a>
 		<a href="<?php the_permalink(); ?>" class="button hide-for-small">Read Post...</a>
 	</div>
 
@@ -33,8 +33,8 @@
 			$content = apply_filters('the_content', $content);
 			$content = str_replace(']]>', ']]&gt;', $content);
 			// Needed for Foundation's subheader, so that it appears as a normal paragraph.
-			$content = preg_replace('/<h[1-6] class=\"subheader\">/', '<p>', $content); 
-			$content = preg_replace('/<h\/[1-6]>/', '<\/p>', $content); 
+			$content = preg_replace('/<h[1-6] class=\"subheader\">/', '<p>', $content);
+			$content = preg_replace('/<h\/[1-6]>/', '<\/p>', $content);
 			echo $content;
 		?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'rp' ), 'after' => '</div>' ) ); ?>
