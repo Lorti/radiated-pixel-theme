@@ -32,8 +32,9 @@
 <?php while ($fQuery->have_posts()) : $fQuery->the_post(); ?>
 	<li<?php if ($fIndex > 2) echo ' class="hide-for-small"'; ?>>
   		<a href="<?php the_permalink(); ?>">
-  			<img class="block-grid--featured__fallback-image" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>" alt="Thumbnail">
-  			<div class="block-grid--featured__cropped-image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>);"></div>
+  			<?php $image_attributes = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium'); ?>
+  			<img class="block-grid--featured__fallback-image" src="<?php echo $image_attributes[0]; ?>" alt="Thumbnail">
+  			<div class="block-grid--featured__cropped-image" style="background-image: url(<?php echo $image_attributes[0]; ?>);"></div>
   		</a>
 	</li>
 	<?php $fIndex++; ?>
