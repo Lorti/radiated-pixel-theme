@@ -1163,8 +1163,8 @@ $topbar-height: 75px;
 //// Link colors and styles for top-level nav
 
 // $topbar-link-color: #fff;
-// $topbar-link-weight: bold;
-// $topbar-link-font-size: emCalc(13px);
+$topbar-link-weight: normal;
+$topbar-link-font-size: emCalc(16px);
 $topbar-link-hover-lightness: -5% !default;
 
 //// Top bar dropdown elements
