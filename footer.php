@@ -27,7 +27,7 @@
 <?php wp_footer(); ?>
 
 <script>
-	$(document).foundation();
+  jQuery(document).foundation();
 </script>
 
 
