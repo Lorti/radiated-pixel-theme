@@ -33,8 +33,10 @@
 			$content = apply_filters('the_content', $content);
 			$content = str_replace(']]>', ']]&gt;', $content);
 			// Needed for Foundation's subheader, so that it appears as a normal paragraph.
-			$content = preg_replace('/<h[1-6] class=\"subheader\">/', '<p>', $content);
-			$content = preg_replace('/<h\/[1-6]>/', '<\/p>', $content);
+			$content = preg_replace('/<h[1-6] class=\"subheader\">(.*?)<\/h[1-6]>/', '<p>$1</p>', $content);
+			// http://foundation.zurb.com/docs/components/flex-video.html
+			$content = preg_replace('/<iframe.*?youtube.*?><\/iframe>/', '<div class="flex-video widescreen">$0</div>', $content);
+			$content = preg_replace('/<iframe.*?vimeo.*?><\/iframe>/', '<div class="flex-video vimeo widescreen">$0</div>', $content);
 			echo $content;
 		?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'rp' ), 'after' => '</div>' ) ); ?>
