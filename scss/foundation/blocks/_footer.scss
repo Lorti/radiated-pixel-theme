@@ -1,0 +1,50 @@
+/* ==========================================================================
+    FOOTER
+   ========================================================================== */
+
+.colophon {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  p:nth-child(n+2) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.colophon__designer {
+  position: absolute;
+  right: $column-gutter / 2;
+  bottom: -2em;
+  img {
+    float: right;
+    margin-right: 2px;
+  }
+  @media (max-width: emCalc(720px)) {
+    float: left;
+    position: static;
+    margin-top: 2em;
+    margin-left: $column-gutter / 2;
+    margin-bottom: -2em;
+  }
+}
+
+.colophon__bubble {
+  position: relative;
+  margin-bottom: 24px;
+  padding: 1em;
+  max-width: 320px;
+  line-height: normal;
+  @include border-radius(10px);
+  background: #292929;
+  &:after {
+    position: absolute;
+    right: 60px;
+    bottom: -15px;
+    display: block;
+    width: 0;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #292929 transparent;
+    content: '';
+  }
+}

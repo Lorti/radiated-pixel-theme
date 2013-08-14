@@ -42,8 +42,14 @@
   "foundation/components/tooltips",
   "foundation/components/dropdown";
 
+// Compass Components
+@import "compass/css3";
+
 // Radiated Pixel
 @import
-  "foundation/components/rp-block-grid",
-  "foundation/components/rp-type",
-  "foundation/components/rp-top-bar";
+  "foundation/components/radiated-pixel-global",
+  "foundation/components/radiated-pixel-block-grid",
+  "foundation/components/radiated-pixel-type",
+  "foundation/components/radiated-pixel-top-bar",
+  "foundation/blocks/bar",
+  "foundation/blocks/footer";
