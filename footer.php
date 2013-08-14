@@ -10,12 +10,15 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon" class="row" role="contentinfo">
-		<div class="large-12 columns">
-			<?php do_action( 'rp_credits' ); ?>
-			<?php printf( __( 'This theme for %1$s was made by %2$s.', 'rp' ), '<em>Radiated Pixel</em>', '<a href="http://www.manuelwieser.com/" rel="designer">office@manuelwieser.com</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="colophon" role="contentinfo">
+    <div class="row">
+  		<div class="large-12 columns">
+  			<?php do_action( 'rp_credits' ); ?>
+  			<?php printf( __( 'This theme for %1$s was made by %2$s.', 'rp' ), '<em>Radiated Pixel</em>', '<a href="http://www.manuelwieser.com/" rel="designer">office@manuelwieser.com</a>' ); ?>
+  		</div>
+    </div>
+	</footer>
+
 </div><!-- #page -->
 
 
