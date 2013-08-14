@@ -19,36 +19,17 @@
 	<?php endif; ?>
 
 
-
 	<div class="large-4 columns">
 		<a class="th" href="<?php the_permalink(); ?>">
 			<img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumbnail')[0] ?>" width="100%" alt="Thumbnail"></a>
 		<a href="<?php the_permalink(); ?>" class="button hide-for-small">Read Post...</a>
 	</div>
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+
 	<div class="entry-summary large-8 columns">
 		<?php the_excerpt(); ?>
 		<a href="<?php the_permalink(); ?>" class="button show-for-small">Read Post...</a>
 	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content large-8 columns">
-		<?php
-			$content = get_the_content(__( 'Continue reading <span class="meta-nav">&rarr;</span>', 'rp' ));
-			$content = apply_filters('the_content', $content);
-			$content = str_replace(']]>', ']]&gt;', $content);
-			// Needed for Foundation's subheader, so that it appears as a normal paragraph.
-			$content = preg_replace('/<h[1-6] class=\"subheader\">(.*?)<\/h[1-6]>/', '<p>$1</p>', $content);
-			// http://foundation.zurb.com/docs/components/flex-video.html
-			$content = preg_replace('/<iframe.*?youtube.*?><\/iframe>/', '<div class="flex-video widescreen">$0</div>', $content);
-			$content = preg_replace('/<iframe.*?vimeo.*?><\/iframe>/', '<div class="flex-video vimeo widescreen">$0</div>', $content);
-			echo $content;
-		?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'rp' ), 'after' => '</div>' ) ); ?>
-		<a href="<?php the_permalink(); ?>" class="button show-for-small">Read Post...</a>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
-
 
 
 	<footer class="entry-meta large-12 columns">

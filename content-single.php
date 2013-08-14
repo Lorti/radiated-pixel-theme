@@ -14,8 +14,16 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'rp' ), 'after' => '</div>' ) ); ?>
+		<?php
+			$content = get_the_content();
+			// http://codex.wordpress.org/Function_Reference/the_content#Alternative_Usage
+			$content = apply_filters('the_content', $content);
+			$content = str_replace(']]>', ']]&gt;', $content);
+			// http://foundation.zurb.com/docs/components/flex-video.html
+			$content = preg_replace('/<iframe.*?youtube.*?><\/iframe>/', '<div class="flex-video widescreen">$0</div>', $content);
+			$content = preg_replace('/<iframe.*?vimeo.*?><\/iframe>/', '<div class="flex-video vimeo widescreen">$0</div>', $content);
+			echo $content;
+		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
@@ -27,22 +35,14 @@
 			$tag_list = get_the_tag_list( '', __( ', ', 'rp' ) );
 
 			if ( ! rp_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'rp' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'rp' );
+					$meta_text = __( '<span class="icon-tag"> %2$s </span>', 'rp' );
 				}
-
 			} else {
-				// But this blog has loads of categories so we should probably display them here
 				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'rp' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'rp' );
+					$meta_text = __( '<span class="icon-bookmark"> %1$s </span> <span class="icon-tag"> %2$s </span>', 'rp' );
 				}
-
-			} // end check for categories on this blog
+			}
 
 			printf(
 				$meta_text,
@@ -52,7 +52,5 @@
 				the_title_attribute( 'echo=0' )
 			);
 		?>
-
-		<?php edit_post_link( __( 'Edit', 'rp' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
