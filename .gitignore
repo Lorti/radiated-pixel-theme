@@ -9,10 +9,10 @@ node_modules/
 *.sql
 *.sqlite
 
-fontello.eot
-fontello.svg
-fontello.ttf
-fontello.woff
+icons.eot
+icons.svg
+icons.ttf
+icons.woff
 function-pro-light.eot
 function-pro-light.svg
 function-pro-light.ttf

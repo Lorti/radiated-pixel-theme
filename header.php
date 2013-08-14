@@ -41,35 +41,37 @@
 <?php endwhile;?>
 </ul>
 
-<nav class="top-bar top-bar--radiated-pixel" role="navigation">
-	<ul class="title-area">
-	  <li class="name">
-	    <h1>
-	    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-	    	   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-	    	   rel="home">
-		    	<img class="top-bar--radiated-pixel__logo-svg" src="<?php echo get_template_directory_uri(); ?>/img/radiated-pixel-white.svg" alt="Radiated Pixel">
-		    	<img class="top-bar--radiated-pixel__logo-png" src="<?php echo get_template_directory_uri(); ?>/img/radiated-pixel-white.png" alt="Radiated Pixel">
-	    	</a>
-	    </h1>
-	  </li>
-	  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-	</ul>
-
-	<section class="top-bar-section">
-		<?php wp_nav_menu(array(
-				'theme_location' => 'primary',
-				'container' 		 => false,
-				'after'          => '<li class="divider"></li>',
-				'items_wrap'     => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>',
-				'depth'          => '-1'
-
-		)); ?>
-		<ul class="right">
-			<li class="top-bar--radiated-pixel__search"><?php get_search_form(); ?></li>
+<div class="bar">
+	<nav class="top-bar top-bar--radiated-pixel row" role="navigation">
+		<ul class="title-area">
+		  <li class="name">
+		    <h1>
+		    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+		    	   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+		    	   rel="home">
+			    	<img class="top-bar--radiated-pixel__logo-svg" src="<?php echo get_template_directory_uri(); ?>/img/radiated-pixel-white.svg" alt="Radiated Pixel">
+			    	<img class="top-bar--radiated-pixel__logo-png" src="<?php echo get_template_directory_uri(); ?>/img/radiated-pixel-white.png" alt="Radiated Pixel">
+		    	</a>
+		    </h1>
+		  </li>
+		  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		</ul>
-	</section>
-</nav>
+
+		<section class="top-bar-section">
+			<?php wp_nav_menu(array(
+					'theme_location' => 'primary',
+					'container' 		 => false,
+					'after'          => '<li class="divider"></li>',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>',
+					'depth'          => '-1'
+
+			)); ?>
+			<ul class="right">
+				<li class="top-bar--radiated-pixel__search"><?php get_search_form(); ?></li>
+			</ul>
+		</section>
+	</nav>
+</div>
 
 <!-- microformats.org/wiki/hatom -->
 <div id="page" class="hfeed">
