@@ -1,0 +1,26 @@
+/* ==========================================================================
+    BLOCK GRID
+    Radiated Pixel Modifiers
+   ========================================================================== */
+
+.block-grid--featured {
+  margin: 0;
+  li { padding: 0; }
+  a { display: block; }
+  .block-grid--featured__fallback-image {
+    margin: 0;
+    display: block;
+  }
+}
+
+.backgroundsize {
+  .block-grid--featured__fallback-image { display: none; }
+  .block-grid--featured__cropped-image {
+    margin: 0;
+    padding-top: 66.667%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
