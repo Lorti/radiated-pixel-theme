@@ -20,9 +20,11 @@
 
 
 	<div class="large-4 columns">
+		<?php if ( has_post_thumbnail() ) : ?>
 		<a class="th" href="<?php the_permalink(); ?>">
 			<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumbnail'); ?>
 			<img src="<?php echo $featuredImage[0]; ?>" width="100%" alt="Thumbnail"></a>
+		<?php endif; ?>
 		<a href="<?php the_permalink(); ?>" class="button hide-for-small">Read Post...</a>
 	</div>
 
