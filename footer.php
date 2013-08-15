@@ -41,10 +41,12 @@
 <?php wp_footer(); ?>
 
 <script>
-  $(document).foundation();
-  $('#obf').html("<n uers=\"znvygb:bssvpr@znahryjvrfre.pbz?fhowrpg=Srrqonpx sbe Enqvngrq Cvkry\" gnetrg=\"_oynax\">Fraq n zrffntr gb Znahry Jvrfre!</n>".replace(/[a-zA-Z]/g, function (c) {
-    return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-  }));
+  jQuery(document).ready(function($) {
+    $(document).foundation();
+    $('#obf').html("<n uers=\"znvygb:bssvpr@znahryjvrfre.pbz?fhowrpg=Srrqonpx sbe Enqvngrq Cvkry\" gnetrg=\"_oynax\">Fraq n zrffntr gb Znahry Jvrfre!</n>".replace(/[a-zA-Z]/g, function (c) {
+      return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+    }));
+  });
 </script>
 
 

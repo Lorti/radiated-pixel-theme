@@ -20,11 +20,11 @@
     margin-right: 2px;
   }
   @media (max-width: emCalc(720px)) {
-    float: left;
     position: static;
+    float: left;
     margin-top: 2em;
-    margin-left: $column-gutter / 2;
     margin-bottom: -2em;
+    margin-left: $column-gutter / 2;
   }
 }
 
@@ -33,9 +33,9 @@
   margin-bottom: 24px;
   padding: 1em;
   max-width: 320px;
+  background: #292929;
   line-height: normal;
   @include border-radius(10px);
-  background: #292929;
   &:after {
     position: absolute;
     right: 60px;

@@ -21,7 +21,8 @@
 
 	<div class="large-4 columns">
 		<a class="th" href="<?php the_permalink(); ?>">
-			<img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumbnail')[0] ?>" width="100%" alt="Thumbnail"></a>
+			<?php $featuredImage = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumbnail'); ?>
+			<img src="<?php echo $featuredImage[0]; ?>" width="100%" alt="Thumbnail"></a>
 		<a href="<?php the_permalink(); ?>" class="button hide-for-small">Read Post...</a>
 	</div>
 
