@@ -14,7 +14,7 @@
     <div class="row">
       <div class="large-12 columns">
         <p><strong>© Radiated Pixel</strong> – <?php echo get_bloginfo ( 'description' );  ?></p>
-        <p>Software published on this site is licensed under <a href="http://opensource.org/licenses/mit-license.php">The MIT License</a>.</p>
+        <p>Source code published on this site is licensed under <a href="http://opensource.org/licenses/mit-license.php">The MIT License</a>.</p>
         <?php do_action( 'rp_credits' ); ?>
         <p><?php printf( __( 'This theme was made by %1$s and is available on %2$s.', 'rp' ), '<a href="http://www.manuelwieser.com/" rel="designer">Manuel Wieser</a>', '<a href="https://github.com/Lorti/radiated-pixel-theme">GitHub</a>' ); ?></p>
       </div>
