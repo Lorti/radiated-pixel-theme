@@ -7,17 +7,25 @@ $topbar-search-bg: #eb8600 !default;
 $topbar-search-highlight: #ffc64c !default;
 $topbar-search-shadow: #ca6900 !default;
 
+
+
 .top-bar--radiated-pixel {
+  background-color: transparent;
+  font-family: $header-font-family;
+  .top-bar-section li a:not(.button) {
+    padding-left: $column-gutter / 2;
+    padding-right: $column-gutter / 2;
+  }
 
 
 
   // ======== LOGO ========
   .name h1 a {
-    padding: ($column-gutter / 3) ($column-gutter / 2);
+    padding: ($column-gutter / 4) ($column-gutter / 2);
   }
   .top-bar--radiated-pixel__logo-svg,
   .top-bar--radiated-pixel__logo-png {
-    height: $topbar-height - convert-to-px($column-gutter / 1.5);
+    height: $topbar-height - convert-to-px($column-gutter / 2);
     vertical-align: top;
   }
 
@@ -67,8 +75,12 @@ $topbar-search-shadow: #ca6900 !default;
 
 
   // ======== SEARCH ========
+  .top-bar-section ul { background-color: transparent; }
+
   .top-bar--radiated-pixel__search {
+    font-family: $body-font-family;
     position: relative;
+    .search-form { background-color: transparent; }
     &:after {
       @extend %icon;
       @extend %icon-search;

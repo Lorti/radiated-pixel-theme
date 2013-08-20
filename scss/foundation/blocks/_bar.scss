@@ -3,6 +3,12 @@
     Radiated Pixel Modifiers
    ========================================================================== */
 
-.bar { background: $primary-color; }
+$bar-shadow: #eb8600;
+$bar-highlight: #fbb73d;
+
+.bar {
+  background: $primary-color;
+  @include box-shadow(inset 0 1px 0 $bar-highlight, inset 0 -1px 0 $bar-shadow);
+}
 
 
