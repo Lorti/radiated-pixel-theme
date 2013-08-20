@@ -42,7 +42,7 @@
 </ul>
 
 <div class="bar">
-	<nav class="top-bar top-bar--radiated-pixel" role="navigation">
+	<nav class="top-bar top-bar--radiated-pixel row" role="navigation">
 		<ul class="title-area">
 		  <li class="name">
 		    <h1>
@@ -61,10 +61,8 @@
 			<?php wp_nav_menu(array(
 					'theme_location' => 'primary',
 					'container' 		 => false,
-					'after'          => '<li class="divider"></li>',
-					'items_wrap'     => '<ul id="%1$s" class="%2$s"><li class="divider"></li>%3$s</ul>',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 					'depth'          => '-1'
-
 			)); ?>
 			<ul class="right">
 				<li class="top-bar--radiated-pixel__search"><?php get_search_form(); ?></li>
