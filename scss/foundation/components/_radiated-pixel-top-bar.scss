@@ -1,7 +1,7 @@
-/* ==========================================================================
-    TOP BAR
-    Radiated Pixel Modifiers
-   ========================================================================== */
+// ==========================================================================
+//  TOP BAR
+//  Radiated Pixel Modifiers
+// ==========================================================================
 
 $topbar-search-bg: #eb8600 !default;
 $topbar-search-highlight: #ffc64c !default;
@@ -9,7 +9,9 @@ $topbar-search-shadow: #ca6900 !default;
 
 .top-bar--radiated-pixel {
 
-  /* ======== LOGO ======== */
+
+
+  // ======== LOGO ========
   .name h1 a {
     padding: ($column-gutter / 3) ($column-gutter / 2);
   }
@@ -22,7 +24,9 @@ $topbar-search-shadow: #ca6900 !default;
   .no-svg & .top-bar--radiated-pixel__logo-svg { display: none; }
   .svg & .top-bar--radiated-pixel__logo-png { display: none; }
 
-  /* ======== MENU ICON ======== */
+
+
+  // ======== MENU ICON ========
   .toggle-topbar.menu-icon {
     top: 0;
     right: $column-gutter / 2;
@@ -60,7 +64,9 @@ $topbar-search-shadow: #ca6900 !default;
     }
   }
 
-  /* ======== SEARCH ======== */
+
+
+  // ======== SEARCH ========
   .top-bar--radiated-pixel__search {
     position: relative;
     &:after {
@@ -82,7 +88,7 @@ $topbar-search-shadow: #ca6900 !default;
     background: $topbar-search-bg;
     color: $topbar-search-highlight;
     border: none;
-    padding-right: 20px; // Leave some space for the search icon.
+    padding-right: 32px; // Leave some space for the search icon.
     @include box-shadow(inset 0 1px 0 $topbar-search-shadow, inset 0 -1px 0 $topbar-search-highlight);
     &::-webkit-input-placeholder { color: $topbar-search-highlight; }
     &:-moz-placeholder { color: $topbar-search-highlight; }
@@ -104,27 +110,31 @@ $topbar-search-shadow: #ca6900 !default;
 
 
 
-/* ==========================================================================
-    TOP BAR
-    Media Queries
-   ========================================================================== */
+// ==========================================================================
+//  TOP BAR
+//  Media Queries
+// ==========================================================================
 
 @media #{$topbar-media-query} {
   .top-bar--radiated-pixel {
 
-    /* ======== SEARCH ======== */
+    // ======== SEARCH ========
     .top-bar--radiated-pixel__search {
       &:after {
-        right: $topbar-height / 3;
+        top: 0;
+        right: $column-gutter / 2;
+        margin-top: 0;
+        line-height: 75px;
       }
     }
     .search-form {
-      padding-right: $topbar-height / 3;
+      padding-right: $column-gutter / 2;
       background: $topbar-bg;
       height: $topbar-height;
       display: table-cell;
       vertical-align: middle;
     }
+
   }
 }
 
