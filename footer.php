@@ -18,13 +18,13 @@
         <?php do_action( 'rp_credits' ); ?>
         <p><?php printf( __( 'This theme was made by %1$s and is available on %2$s.', 'rp' ), '<a href="http://www.manuelwieser.com/" rel="designer">Manuel Wieser</a>', '<a href="https://github.com/Lorti/radiated-pixel-theme">GitHub</a>' ); ?></p>
       </div>
-      <div class="colophon__designer">
+      <div class="colophon__developer">
         <div class="colophon__bubble">
           Having trouble with our new site?<br>
           You want to give us feedback?<br>
           <span id="obf">Send a message to Manuel Wieser!</span>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/designer.png" alt="Manuel Wieser">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/developer.png" alt="Manuel Wieser">
       </div>
     </div>
 

@@ -30,3 +30,6 @@ maven-pro-regular.woff
 Icon?
 ehthumbs.db
 Thumbs.db
+
+*.sublime-project
+*.sublime-workspace
