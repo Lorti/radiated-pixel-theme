@@ -42,7 +42,7 @@
 </ul>
 
 <div class="bar">
-	<nav class="top-bar top-bar--radiated-pixel row" role="navigation">
+	<nav class="top-bar top-bar--radiated-pixel" role="navigation">
 		<ul class="title-area">
 		  <li class="name">
 		    <h1>
@@ -54,7 +54,7 @@
 		    	</a>
 		    </h1>
 		  </li>
-		  <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+		  <li class="toggle-topbar menu-icon"><a href="#"><span></span><strong>Menu</strong></a></li>
 		</ul>
 
 		<section class="top-bar-section">

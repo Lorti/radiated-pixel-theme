@@ -3,8 +3,6 @@
     Radiated Pixel Modifiers
    ========================================================================== */
 
-$topbar-logo-margin: 10px !default;
-
 $topbar-search-bg: #eb8600 !default;
 $topbar-search-highlight: #ffc64c !default;
 $topbar-search-shadow: #ca6900 !default;
@@ -12,10 +10,12 @@ $topbar-search-shadow: #ca6900 !default;
 .top-bar--radiated-pixel {
 
   /* ======== LOGO ======== */
-  .name h1 a { padding-top: $topbar-logo-margin; }
+  .name h1 a {
+    padding: ($column-gutter / 3) ($column-gutter / 2);
+  }
   .top-bar--radiated-pixel__logo-svg,
   .top-bar--radiated-pixel__logo-png {
-    height: $topbar-height - $topbar-logo-margin - $topbar-logo-margin;
+    height: $topbar-height - convert-to-px($column-gutter / 1.5);
     vertical-align: top;
   }
 
@@ -25,22 +25,30 @@ $topbar-search-shadow: #ca6900 !default;
   /* ======== MENU ICON ======== */
   .toggle-topbar.menu-icon {
     top: 0;
+    right: $column-gutter / 2;
     margin-top: 0;
 
     a {
-      width: $topbar-height;
+      text-indent: 0;
+      padding-right: $column-gutter;
+      padding-left: $column-gutter;
+      width: auto;
       height: $topbar-height;
-      line-height: $topbar-height;
       background-color: $topbar-dropdown-bg;
-
+      line-height: $topbar-height;
+      strong {
+        vertical-align: middle;
+        font-weight: normal;
+      }
       span {
-        top: 50%;
-        #{$opposite-direction}: 50%;
+        position: static;
+        display: inline-block;
         margin-top: -1px;
-        margin-#{$opposite-direction}: -10px;
+        margin-right: emCalc(8);
         width: 20px;
         height: 2px;
         background-color: $topbar-menu-icon-color;
+        vertical-align: middle;
         // Shh, don't tell, but box-shadows create the menu icon :)
         -webkit-box-shadow: 0 -6px 0 1px $topbar-menu-icon-color,
                             0 0    0 1px $topbar-menu-icon-color,
@@ -49,15 +57,6 @@ $topbar-search-shadow: #ca6900 !default;
                             0 0    0 1px $topbar-menu-icon-color,
                             0 6px  0 1px $topbar-menu-icon-color;
       }
-    }
-  }
-
-  &.expanded {
-    background-color: $topbar-dropdown-bg;
-
-    .toggle-topbar {
-      // The icon should stay the same.
-      a { color: $topbar-menu-link-color-toggled; }
     }
   }
 

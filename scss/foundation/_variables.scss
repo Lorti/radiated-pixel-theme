@@ -28,6 +28,13 @@ $em-base: 16 !default;
   @return $value;
 }
 
+// Converts "em" to "px" using the ($)em-base
+@function convert-to-px($value)  {
+  $value: strip-unit($value) * strip-unit($em-base);
+  @if ($value == 0px) { $value: 0; } // Turn 0px into 0
+  @return $value;
+}
+
 // Working in ems is annoying. Think in pixels by using this handy function, emCalc(#)
 // Just enter the number, no need to mention "px"
 @function emCalc($values...) {
@@ -1247,8 +1254,8 @@ $topbar-height: 75px;
 
 // Controlling the styles for the title in the top bar
 
-// $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(17);
+$topbar-title-weight: normal;
+$topbar-title-font-size: emCalc(16);
 
 // Style the top bar dropdown elements
 
@@ -1277,13 +1284,13 @@ $topbar-link-hover-lightness: -5%;
 
 // Top menu icon styles
 
-// $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: emCalc(13);
-// $topbar-menu-link-weight: bold;
+$topbar-menu-link-transform: none;
+$topbar-menu-link-font-size: emCalc(16);
+$topbar-menu-link-weight: normal;
 $topbar-menu-link-color: #feef74;
 $topbar-menu-icon-color: #feef74;
-$topbar-menu-link-color-toggled: #fff;
-$topbar-menu-icon-color-toggled: #fff;
+$topbar-menu-link-color-toggled: #feef74;
+$topbar-menu-icon-color-toggled: #feef74;
 
 // Transitions and breakpoint styles
 
