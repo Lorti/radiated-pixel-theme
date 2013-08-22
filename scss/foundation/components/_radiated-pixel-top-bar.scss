@@ -205,7 +205,7 @@ $topbar-dropdown-shadow: #ca6900 !default;
         line-height: $topbar-height;
       }
       li a:not(.button) {
-        background-color: transparent;
+        background: none;
         padding-left: $column-gutter / 2;
         padding-right: $column-gutter / 2;
       }
@@ -218,6 +218,7 @@ $topbar-dropdown-shadow: #ca6900 !default;
       float: right !important;
       padding: inherit;
       border-top-width: 0;
+      background: none;
     }
     .top-bar--radiated-pixel__search {
       &:after {
