@@ -3,8 +3,8 @@
     Radiated Pixel Modifiers
    ========================================================================== */
 
-$bar-shadow: #eb8600;
-$bar-highlight: #fbb73d;
+$bar-shadow: #eb8600 !default;
+$bar-highlight: #fbb73d !default;
 
 .bar {
   background: $primary-color;

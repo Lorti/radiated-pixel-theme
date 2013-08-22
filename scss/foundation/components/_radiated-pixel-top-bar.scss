@@ -7,14 +7,45 @@ $topbar-search-bg: #eb8600 !default;
 $topbar-search-highlight: #ffc64c !default;
 $topbar-search-shadow: #ca6900 !default;
 
+$topbar-dropdown-highlight: #ffa22e !default;
+$topbar-dropdown-shadow: #ca6900 !default;
+
 
 
 .top-bar--radiated-pixel {
-  background-color: transparent;
   font-family: $header-font-family;
-  .top-bar-section li a:not(.button) {
-    padding-left: $column-gutter / 2;
-    padding-right: $column-gutter / 2;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $row-width;
+  @include box-shadow(inherit); // Let's the shadow and highlight of the bar come through.
+  .title-area { @include box-shadow(inherit); }
+
+
+
+  // ======== LIST ========
+  .top-bar-section {
+    border-left: ($column-gutter / 2) solid $body-bg;
+    border-right: ($column-gutter / 2) solid $body-bg;
+  }
+
+
+
+  // ======== LIST ITEMS ========
+  .top-bar-section {
+    .menu-item > a {
+      padding: 0;
+      border-top: 1px solid $topbar-dropdown-highlight;
+      border-bottom: 1px solid $topbar-dropdown-shadow;
+      color: $topbar-dropdown-link-color;
+      font-size: 1em;
+      line-height: $topbar-height * .66;
+    }
+    .menu-item {
+      padding-right: ($column-gutter / 2);
+      padding-left: ($column-gutter / 2);
+      &:first-child > a { border-top-width: 0; }
+      &:last-child > a { border-bottom-width: 0; }
+    }
   }
 
 
@@ -39,14 +70,13 @@ $topbar-search-shadow: #ca6900 !default;
     top: 0;
     right: $column-gutter / 2;
     margin-top: 0;
-
     a {
-      text-indent: 0;
       padding-right: $column-gutter;
       padding-left: $column-gutter;
       width: auto;
       height: $topbar-height;
-      background-color: $topbar-dropdown-bg;
+      color: $topbar-link-color;
+      text-indent: 0;
       line-height: $topbar-height;
       strong {
         vertical-align: middle;
@@ -59,23 +89,44 @@ $topbar-search-shadow: #ca6900 !default;
         margin-right: emCalc(8);
         width: 20px;
         height: 2px;
-        background-color: $topbar-menu-icon-color;
+        background-color: $topbar-link-color;
         vertical-align: middle;
         // Shh, don't tell, but box-shadows create the menu icon :)
-        -webkit-box-shadow: 0 -6px 0 1px $topbar-menu-icon-color,
-                            0 0    0 1px $topbar-menu-icon-color,
-                            0 6px  0 1px $topbar-menu-icon-color;
-        box-shadow:         0 -6px 0 1px $topbar-menu-icon-color,
-                            0 0    0 1px $topbar-menu-icon-color,
-                            0 6px  0 1px $topbar-menu-icon-color;
+        -webkit-box-shadow: 0 -6px 0 1px $topbar-link-color,
+                            0 0    0 1px $topbar-link-color,
+                            0 6px  0 1px $topbar-link-color;
+        box-shadow:         0 -6px 0 1px $topbar-link-color,
+                            0 0    0 1px $topbar-link-color,
+                            0 6px  0 1px $topbar-link-color;
       }
+    }
+  }
+
+  &.expanded .toggle-topbar.menu-icon a {
+    background-color: $topbar-dropdown-bg;
+    color: $topbar-dropdown-link-color;
+    @include box-shadow(inset 0 1px 0 $topbar-dropdown-shadow);
+    span {
+      background-color: $topbar-menu-icon-color;
+      -webkit-box-shadow: 0 -6px 0 1px $topbar-menu-icon-color,
+                          0 0    0 1px $topbar-menu-icon-color,
+                          0 6px  0 1px $topbar-menu-icon-color;
+      box-shadow:         0 -6px 0 1px $topbar-menu-icon-color,
+                          0 0    0 1px $topbar-menu-icon-color,
+                          0 6px  0 1px $topbar-menu-icon-color;
     }
   }
 
 
 
   // ======== SEARCH ========
-  .top-bar-section ul { background-color: transparent; }
+  .top-bar-section ul.right {
+    float: none !important;
+    padding: ($column-gutter / 4) ($column-gutter / 2);
+    border-top: 1px solid $topbar-search-highlight;
+    background: $topbar-bg;
+    @include box-sizing(border-box);
+  }
 
   .top-bar--radiated-pixel__search {
     font-family: $body-font-family;
@@ -130,7 +181,44 @@ $topbar-search-shadow: #ca6900 !default;
 @media #{$topbar-media-query} {
   .top-bar--radiated-pixel {
 
+
+
+    // ======== LIST ========
+    .top-bar-section {
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+
+
+
+    // ======== LIST ITEMS ========
+    .top-bar-section {
+      .menu-item {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .menu-item > a {
+        border-top-width: 0;
+        border-bottom-width: 0;
+        color: $topbar-link-color;
+        font-size: $topbar-link-font-size;
+        line-height: $topbar-height;
+      }
+      li a:not(.button) {
+        background-color: transparent;
+        padding-left: $column-gutter / 2;
+        padding-right: $column-gutter / 2;
+      }
+    }
+
+
+
     // ======== SEARCH ========
+    .top-bar-section ul.right {
+      float: right !important;
+      padding: inherit;
+      border-top-width: 0;
+    }
     .top-bar--radiated-pixel__search {
       &:after {
         top: 0;
@@ -146,6 +234,8 @@ $topbar-search-shadow: #ca6900 !default;
       display: table-cell;
       vertical-align: middle;
     }
+
+
 
   }
 }

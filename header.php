@@ -42,7 +42,7 @@
 </ul>
 
 <div class="bar">
-	<nav class="top-bar top-bar--radiated-pixel row" role="navigation">
+	<nav class="top-bar top-bar--radiated-pixel" role="navigation">
 		<ul class="title-area">
 		  <li class="name">
 		    <h1>
