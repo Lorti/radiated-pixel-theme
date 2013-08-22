@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         files: 'scss/**',
         tasks: ['compass'],
         options: {
-          livereload: 1337
+          livereload: true
         }
       }
     }
