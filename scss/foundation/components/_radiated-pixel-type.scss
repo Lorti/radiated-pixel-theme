@@ -1,11 +1,11 @@
-/* ==========================================================================
-    TYPE
-    Radiated Pixel Modifiers
-   ========================================================================== */
+// ==========================================================================
+// Type
+//  @author wima@bet-at-home.com (Manuel Wieser)
+// ==========================================================================
 
 @charset "UTF-8";
 
-/* ======== Icons ======== */
+// ======== Icons ========
 
 @font-face {
   font-family: 'icons';
@@ -35,26 +35,26 @@
   speak: none;
 }
 
-.icon-minus-squared:before { content: '\68'; } /* 'h' */
-.icon-menu:before { content: '\62'; } /* 'b' */
-.icon-check:before { content: '\63'; } /* 'c' */
-.icon-cancel:before { content: '\64'; } /* 'd' */
-.icon-cancel-circled:before { content: '\65'; } /* 'e' */
-.icon-cancel-squared:before { content: '\66'; } /* 'f' */
-.icon-minus-circled:before { content: '\67'; } /* 'g' */
-.icon-tag:before { content: '\6a'; } /* 'j' */
-.icon-comment:before { content: '\6d'; } /* 'm' */
-.icon-comments:before { content: '\6e'; } /* 'n' */
-.icon-rss:before { content: '\6f'; } /* 'o' */
-.icon-twitter:before { content: '\71'; } /* 'q' */
-.icon-calendar:before { content: '\70'; } /* 'p' */
-.icon-category:before { content: '\6c'; } /* 'l' */
+.icon-minus-squared:before  { content: '\68'; } // 'h'
+.icon-menu:before           { content: '\62'; } // 'b'
+.icon-check:before          { content: '\63'; } // 'c'
+.icon-cancel:before         { content: '\64'; } // 'd'
+.icon-cancel-circled:before { content: '\65'; } // 'e'
+.icon-cancel-squared:before { content: '\66'; } // 'f'
+.icon-minus-circled:before  { content: '\67'; } // 'g'
+.icon-tag:before            { content: '\6a'; } // 'j'
+.icon-comment:before        { content: '\6d'; } // 'm'
+.icon-comments:before       { content: '\6e'; } // 'n'
+.icon-rss:before            { content: '\6f'; } // 'o'
+.icon-twitter:before        { content: '\71'; } // 'q'
+.icon-calendar:before       { content: '\70'; } // 'p'
+.icon-category:before       { content: '\6c'; } // 'l'
 %icon-search,
-.icon-search:before { content: '\61'; } /* 'a' */
-.icon-bookmark:before { content: '\6b'; } /* 'k' */
-.icon-link:before { content: '\69'; } /* 'i' */
+.icon-search:before         { content: '\61'; } // 'a'
+.icon-bookmark:before       { content: '\6b'; } // 'k'
+.icon-link:before           { content: '\69'; } // 'i'
 
-/* ======== Maven Pro Light ======== */
+// ======== Maven Pro Light ========
 
 @font-face {
   font-family: 'Maven Pro Regular';
@@ -67,7 +67,7 @@
   font-style: normal;
 }
 
-/* ======== Function Pro Light ======== */
+// ======== Function Pro Light ========
 
 @font-face {
   font-family: 'Function Pro Light';

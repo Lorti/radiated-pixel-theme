@@ -1,11 +1,7 @@
-// Make sure the charset is set appropriately
 @charset "UTF-8";
 
-// This includes all of the foundation global elements that are needed to work with any of the other files.
-@import "foundation/variables";
-
-// Foundation Components
 @import
+  "foundation/variables",
   "foundation/components/global",
   "foundation/components/grid",
   "foundation/components/visibility",
@@ -42,11 +38,8 @@
   "foundation/components/tooltips",
   "foundation/components/dropdown";
 
-// Compass Components
-@import "compass/css3";
-
-// Radiated Pixel
 @import
+  "compass/css3",
   "foundation/components/radiated-pixel-global",
   "foundation/components/radiated-pixel-block-grid",
   "foundation/components/radiated-pixel-type",

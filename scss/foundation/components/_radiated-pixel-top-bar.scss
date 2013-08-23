@@ -1,14 +1,15 @@
 // ==========================================================================
-//  TOP BAR
-//  Radiated Pixel Modifiers
+//  Top bar
+//  @author wima@bet-at-home.com (Manuel Wieser)
 // ==========================================================================
 
-$topbar-search-bg: #eb8600 !default;
-$topbar-search-highlight: #ffc64c !default;
-$topbar-search-shadow: #ca6900 !default;
 
-$topbar-dropdown-highlight: #ffa22e !default;
-$topbar-dropdown-shadow: #ca6900 !default;
+
+@mixin active-list-item {
+  background-color: $topbar-dropdown-bg;
+  color: $topbar-menu-link-color-toggled;
+  @include box-shadow(inset 0 1px 0 $topbar-dropdown-shadow);
+}
 
 
 
@@ -22,15 +23,20 @@ $topbar-dropdown-shadow: #ca6900 !default;
 
 
 
-  // ======== LIST ========
+  // ======== List ========
   .top-bar-section {
     border-left: ($column-gutter / 2) solid $body-bg;
     border-right: ($column-gutter / 2) solid $body-bg;
+
+    @media #{$topbar-media-query} {
+      border-left-width: 0;
+      border-right-width: 0;
+    }
   }
 
 
 
-  // ======== LIST ITEMS ========
+  // ======== List items ========
   .top-bar-section {
     .menu-item > a {
       padding: 0;
@@ -46,11 +52,37 @@ $topbar-dropdown-shadow: #ca6900 !default;
       &:first-child > a { border-top-width: 0; }
       &:last-child > a { border-bottom-width: 0; }
     }
+
+    @media #{$topbar-media-query} {
+      .menu-item {
+        padding-right: 0;
+        padding-left: 0;
+        &.current-menu-item { @include active-list-item; }
+        & > a {
+          border-top-width: 0;
+          border-bottom-width: 0;
+          color: inherit;
+          font-size: $topbar-link-font-size * .75;
+          line-height: $topbar-height;
+        }
+      }
+      li a:not(.button) {
+        background: none;
+        padding-left: $column-gutter / 2;
+        padding-right: $column-gutter / 2;
+      }
+    }
+
+    @media #{$topbar-large-media-query} {
+      .menu-item > a {
+        font-size: $topbar-link-font-size;
+      }
+    }
   }
 
 
 
-  // ======== LOGO ========
+  // ======== Logo ========
   .name h1 a {
     padding: ($column-gutter / 4) ($column-gutter / 2);
   }
@@ -65,7 +97,7 @@ $topbar-dropdown-shadow: #ca6900 !default;
 
 
 
-  // ======== MENU ICON ========
+  // ======== Menu ========
   .toggle-topbar.menu-icon {
     top: 0;
     right: $column-gutter / 2;
@@ -103,9 +135,7 @@ $topbar-dropdown-shadow: #ca6900 !default;
   }
 
   &.expanded .toggle-topbar.menu-icon a {
-    background-color: $topbar-dropdown-bg;
-    color: $topbar-dropdown-link-color;
-    @include box-shadow(inset 0 1px 0 $topbar-dropdown-shadow);
+    @include active-list-item;
     span {
       background-color: $topbar-menu-icon-color;
       -webkit-box-shadow: 0 -6px 0 1px $topbar-menu-icon-color,
@@ -119,19 +149,25 @@ $topbar-dropdown-shadow: #ca6900 !default;
 
 
 
-  // ======== SEARCH ========
+  // ======== Search ========
   .top-bar-section ul.right {
     float: none !important;
     padding: ($column-gutter / 4) ($column-gutter / 2);
     border-top: 1px solid $topbar-search-highlight;
     background: $topbar-bg;
     @include box-sizing(border-box);
+
+    @media #{$topbar-media-query} {
+      float: right !important;
+      padding: inherit;
+      border-top-width: 0;
+      background: none;
+    }
   }
 
   .top-bar--radiated-pixel__search {
     font-family: $body-font-family;
     position: relative;
-    .search-form { background-color: transparent; }
     &:after {
       @extend %icon;
       @extend %icon-search;
@@ -143,6 +179,24 @@ $topbar-dropdown-shadow: #ca6900 !default;
       text-shadow: 0 -1px 0 $topbar-search-shadow;
       color: $topbar-search-highlight;
       right: 0;
+
+      @media #{$topbar-media-query} {
+        top: 0;
+        right: $column-gutter / 2;
+        margin-top: 0;
+        line-height: 75px;
+      }
+    }
+    .search-form {
+      background-color: transparent;
+
+      @media #{$topbar-media-query} {
+        padding-right: $column-gutter / 2;
+        background: $topbar-bg;
+        height: $topbar-height;
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -152,7 +206,8 @@ $topbar-dropdown-shadow: #ca6900 !default;
     color: $topbar-search-highlight;
     border: none;
     padding-right: 32px; // Leave some space for the search icon.
-    @include box-shadow(inset 0 1px 0 $topbar-search-shadow, inset 0 -1px 0 $topbar-search-highlight);
+    @include box-shadow(inset 0 1px 0 $topbar-search-shadow,
+                        inset 0 -1px 0 $topbar-search-highlight);
     &::-webkit-input-placeholder { color: $topbar-search-highlight; }
     &:-moz-placeholder { color: $topbar-search-highlight; }
     &::-moz-placeholder { color: $topbar-search-highlight; }
@@ -170,75 +225,3 @@ $topbar-dropdown-shadow: #ca6900 !default;
   .search-form__screen-reader-text,
   .search_form__submit { display: none; }
 }
-
-
-
-// ==========================================================================
-//  TOP BAR
-//  Media Queries
-// ==========================================================================
-
-@media #{$topbar-media-query} {
-  .top-bar--radiated-pixel {
-
-
-
-    // ======== LIST ========
-    .top-bar-section {
-      border-left-width: 0;
-      border-right-width: 0;
-    }
-
-
-
-    // ======== LIST ITEMS ========
-    .top-bar-section {
-      .menu-item {
-        padding-right: 0;
-        padding-left: 0;
-      }
-      .menu-item > a {
-        border-top-width: 0;
-        border-bottom-width: 0;
-        color: $topbar-link-color;
-        font-size: $topbar-link-font-size;
-        line-height: $topbar-height;
-      }
-      li a:not(.button) {
-        background: none;
-        padding-left: $column-gutter / 2;
-        padding-right: $column-gutter / 2;
-      }
-    }
-
-
-
-    // ======== SEARCH ========
-    .top-bar-section ul.right {
-      float: right !important;
-      padding: inherit;
-      border-top-width: 0;
-      background: none;
-    }
-    .top-bar--radiated-pixel__search {
-      &:after {
-        top: 0;
-        right: $column-gutter / 2;
-        margin-top: 0;
-        line-height: 75px;
-      }
-    }
-    .search-form {
-      padding-right: $column-gutter / 2;
-      background: $topbar-bg;
-      height: $topbar-height;
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-
-
-  }
-}
-
-

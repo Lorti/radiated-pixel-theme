@@ -1,6 +1,9 @@
-//
-// Foundation Variables
-//
+// ==========================================================================
+//  Foundation variables
+//  @author wima@bet-at-home.com (Manuel Wieser)
+// ==========================================================================
+
+
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -54,7 +57,11 @@ $em-base: 16 !default;
 // Change whether or not you include browser prefixes
 // $experimental: true;
 
-// Various global styles
+
+
+// ==========================================================================
+//  Global variables
+// ==========================================================================
 
 $default-float: left;
 
@@ -140,17 +147,20 @@ $primary-color: #f7a82e;
 // $cursor-pointer-value: "pointer";
 // $cursor-help-value: "help";
 
-//
-// Grid Variables
-//
+
+// ==========================================================================
+//  Grid variables
+// ==========================================================================
 
 // $row-width: emCalc(1000);
 // $column-gutter: emCalc(30);
 // $total-columns: 12;
 
-//
-// Block Grid Variables
-//
+
+
+// ==========================================================================
+//  Block grid variables
+// ==========================================================================
 
 // We use this to control the maximum number of block grid elements per row
 
@@ -161,9 +171,11 @@ $primary-color: #f7a82e;
 
 // $block-grid-media-queries: true;
 
-//
-// Typography Variables
-//
+
+
+// ==========================================================================
+//  Typography variables
+// ==========================================================================
 
 // Control header font styles
 
@@ -279,9 +291,11 @@ $header-font-color: #f7a82e;
 // $microformat-abbr-font-weight: bold;
 // $microformat-abbr-font-decoration: none;
 
-//
-// Form Variables
-//
+
+
+// ==========================================================================
+//  Form variables
+// ==========================================================================
 
 // We use this to set the base for lots of form spacing and positioning styles
 
@@ -345,9 +359,11 @@ $header-font-color: #f7a82e;
 // $glowing-effect-fade-time: 0.45s;
 // $glowing-effect-color: $input-focus-border-color;
 
-//
-// Button Variables
-//
+
+
+// ==========================================================================
+//  Button variables
+// ==========================================================================
 
 // We use these to build padding for buttons.
 
@@ -391,17 +407,21 @@ $header-font-color: #f7a82e;
 
 // $button-disabled-opacity: 0.6;
 
-//
-// Button Groups
-//
+
+
+// ==========================================================================
+//  Button group variables
+// ==========================================================================
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 
 // $button-bar-margin-opposite: emCalc(10);
 
-//
-// Dropdown Button Variables
-//
+
+
+// ==========================================================================
+//  Dropdown button variables
+// ==========================================================================
 
 // We use these to set the color of the pip in dropdown buttons
 
@@ -436,9 +456,11 @@ $header-font-color: #f7a82e;
 // $dropdown-button-pip-opposite-lrg: $button-lrg + emCalc(12);
 // $dropdown-button-pip-top-lrg: -$button-lrg / 2 + emCalc(3);
 
-//
-// Split Button Variables
-//
+
+
+// ==========================================================================
+//  Split button variables
+// ==========================================================================
 
 // We use these to control different shared styles for Split Buttons
 
@@ -479,9 +501,11 @@ $header-font-color: #f7a82e;
 // $split-button-pip-top-lrg: $button-lrg + emCalc(5);
 // $split-button-pip-default-float-lrg: emCalc(-9);
 
-//
-// Alert Box Variables
-//
+
+
+// ==========================================================================
+//  Alert box variables
+// ==========================================================================
 
 // We use this to control alert padding.
 
@@ -522,9 +546,10 @@ $header-font-color: #f7a82e;
 // $alert-radius: $global-radius;
 
 
-//
-// Breadcrumb Variables
-//
+
+// ==========================================================================
+//  Breadcrump variables
+// ==========================================================================
 
 // We use this to set the background color for the breadcrumb container.
 
@@ -557,9 +582,11 @@ $header-font-color: #f7a82e;
 // $crumb-slash-color: #aaa;
 // $crumb-slash: "/";
 
-//
-// Clearing Variables
-//
+
+
+// ==========================================================================
+//  Clearing variables
+// ==========================================================================
 
 // We use these to set the background colors for parts of Clearing.
 
@@ -590,9 +617,11 @@ $header-font-color: #f7a82e;
 // $clearing-carousel-thumb-width: 175px;
 // $clearing-carousel-thumb-active-border: 4px solid rgb(255,255,255);
 
-//
-// Custom Form Variables
-//
+
+
+// ==========================================================================
+//  Custom form variables
+// ==========================================================================
 
 // We use these to control the basic form styles input styles
 
@@ -639,9 +668,11 @@ $header-font-color: #f7a82e;
 // $custom-dropdown-width-medium: 254px;
 // $custom-dropdown-width-large: 434px;
 
-//
-// Dropdown Variables
-//
+
+
+// ==========================================================================
+//  Dropdown variables
+// ==========================================================================
 
 // We use these to controls height and width styles.
 
@@ -680,9 +711,11 @@ $header-font-color: #f7a82e;
 
 // $f-dropdown-content-padding: emCalc(20);
 
-//
-// Flex Video Variables
-//
+
+
+// ==========================================================================
+//  Flex video variables
+// ==========================================================================
 
 // We use these to control video container padding and margins
 
@@ -694,9 +727,11 @@ $header-font-color: #f7a82e;
 
 // $flex-video-widescreen-padding-bottom: 57.25%;
 
-//
-// Inline List Variables
-//
+
+
+// ==========================================================================
+//  Inline list variables
+// ==========================================================================
 
 // We use this to control the margins and padding of the inline list.
 
@@ -719,9 +754,11 @@ $header-font-color: #f7a82e;
 
 // $inline-list-children-display: block;
 
-//
-// Joyride Variables
-//
+
+
+// ==========================================================================
+//  Joyride variables
+// ==========================================================================
 
 // Controlling default Joyride styles
 
@@ -758,9 +795,11 @@ $header-font-color: #f7a82e;
 
 // $joyride-screenfill: rgba(0,0,0,0.5);
 
-//
-// Keystroke Variables
-//
+
+
+// ==========================================================================
+//  Keystroke variables
+// ==========================================================================
 
 // We use these to control text styles.
 
@@ -782,9 +821,11 @@ $header-font-color: #f7a82e;
 // $keystroke-border-color: darken($keystroke-bg, $keystroke-function-factor);
 // $keystroke-radius: $global-radius;
 
-//
-// Label Variables
-//
+
+
+// ==========================================================================
+//  Label variables
+// ==========================================================================
 
 // We use these to style the labels
 
@@ -798,16 +839,20 @@ $header-font-color: #f7a82e;
 // $label-font-color: #333;
 // $label-font-color-alt: #fff;
 
-//
-// Magellan Variables
-//
+
+
+// ==========================================================================
+//  Magellan variables
+// ==========================================================================
 
 // $magellan-bg: #fff;
 // $magellan-padding: 10px;
 
-//
-// Orbit Settings
-//
+
+
+// ==========================================================================
+//  Orbit variables
+// ==========================================================================
 
 // We use these to control the caption styles
 
@@ -842,9 +887,11 @@ $header-font-color: #f7a82e;
 // $wrapper-class: "slideshow-wrapper";
 // $preloader-class: "preloader";
 
-//
-// Pagination Variables
-//
+
+
+// ==========================================================================
+//  Pagination variables
+// ==========================================================================
 
 // We use these to control the pagination container
 
@@ -879,9 +926,11 @@ $header-font-color: #f7a82e;
 // $pagination-link-current-cursor: default;
 // $pagination-link-current-active-bg: $primary-color;
 
-//
-// Panel Variables
-//
+
+
+// ==========================================================================
+//  Panel variables
+// ==========================================================================
 
 // We use these to control the background and border styles
 
@@ -906,9 +955,11 @@ $header-font-color: #f7a82e;
 
 // $panel-header-adjust: true;
 
-//
-// Pricing Table Variables
-//
+
+
+// ==========================================================================
+//  Pricing table variables
+// ==========================================================================
 
 // We use this to control the border color
 
@@ -962,9 +1013,11 @@ $header-font-color: #f7a82e;
 // $price-cta-align: center;
 // $price-cta-padding: emCalc(20, 20, 0);
 
-//
-// Progress Bar Variables
-//
+
+
+// ==========================================================================
+//  Progress bar variables
+// ==========================================================================
 
 // We use this to se the prog bar height
 
@@ -990,9 +1043,11 @@ $header-font-color: #f7a82e;
 // $progress-meter-success-color: $success-color;
 // $progress-meter-alert-color: $alert-color;
 
-//
-// Reveal Variables
-//
+
+
+// ==========================================================================
+//  Reveal variables
+// ==========================================================================
 
 // We use these to control the style of the reveal overlay.
 
@@ -1024,9 +1079,11 @@ $header-font-color: #f7a82e;
 // $reveal-modal-class: "reveal-modal";
 // $close-reveal-modal-class: "close-reveal-modal";
 
-//
-// Section Variables
-//
+
+
+// ==========================================================================
+//  Section variables
+// ==========================================================================
 
 // We use these to set padding and hover factor
 
@@ -1064,9 +1121,11 @@ $header-font-color: #f7a82e;
 // $content-selector: ".content";
 // $active-region-selector: ".active";
 
-//
-// Side Nav Variables
-//
+
+
+// ==========================================================================
+//  Side nav variables
+// ==========================================================================
 
 // We use this to control padding.
 
@@ -1091,9 +1150,11 @@ $header-font-color: #f7a82e;
 // $side-nav-divider-style: solid;
 // $side-nav-divider-color: darken(#fff, 10%);
 
-//
-// Sub Nav Variables
-//
+
+
+// ==========================================================================
+//  Sub nav variables
+// ==========================================================================
 
 // We use these to control margin and padding
 
@@ -1116,9 +1177,10 @@ $header-font-color: #f7a82e;
 // $sub-nav-active-padding: emCalc(3, 9);
 // $sub-nav-active-cursor: default;
 
-//
-// Switch Variables
-//
+
+// ==========================================================================
+//  Switch variables
+// ==========================================================================
 
 // Controlling border styles and background colors for the switch container
 
@@ -1159,9 +1221,11 @@ $header-font-color: #f7a82e;
 
 // $switch-label-outline: 1px dotted #888;
 
-//
-// Table Variables
-//
+
+
+// ==========================================================================
+//  Table variables
+// ==========================================================================
 
 // These control the background color for the table and even rows
 
@@ -1194,9 +1258,11 @@ $header-font-color: #f7a82e;
 // $table-display: table-cell;
 // $table-margin-bottom: emCalc(20);
 
-//
-// Image Thumbnail Variables
-//
+
+
+// ==========================================================================
+//  Image Thumbnail Variables
+// ==========================================================================
 
 // We use these to control border styles
 
@@ -1211,9 +1277,11 @@ $thumb-box-shadow-hover: none;
 // $thumb-radius: $global-radius;
 // $thumb-transition-speed: 200ms;
 
-//
-// Tooltip Variables
-//
+
+
+// ==========================================================================
+//  Tooltip variables
+// ==========================================================================
 
 // $has-tip-border-bottom: dotted 1px #ccc;
 // $has-tip-font-weight: bold;
@@ -1235,45 +1303,29 @@ $thumb-box-shadow-hover: none;
 // $tooltip-radius: $global-radius;
 // $tooltip-pip-size: 5px;
 
-//
-// Top Bar Variables
-//
 
-// Background color for the top bar
+
+// ==========================================================================
+//  Top Bar Variables
+// ==========================================================================
 
 $topbar-bg: #f7a82e;
-
-// Height and margin
-
 $topbar-height: 75px;
 // $topbar-margin-bottom: emCalc(30);
-
-// Control Input height for top bar
-
 // $topbar-input-height: 2.45em;
 
-// Controlling the styles for the title in the top bar
 
+// ======== Title ========
 $topbar-title-weight: normal;
 $topbar-title-font-size: emCalc(16);
 
-// Style the top bar dropdown elements
 
-$topbar-dropdown-bg: #eb8600;
-$topbar-dropdown-link-color: #feef74;
-// $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
-// $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
-// $topbar-dropdown-toggle-alpha: 0.5;
-
-// Set the link colors and styles for top-level nav
-
+// ======== Navigation ========
 // $topbar-link-color: #fff;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 $topbar-link-weight: normal;
-$topbar-link-font-size: emCalc(21); // Odd, to allow clean vertical centering
-                                    // when the height of the bar has an odd value.
+$topbar-link-font-size: emCalc(21); // Odd, to allow clean vertical centering when the height of the bar has an odd value.
 $topbar-link-hover-lightness: -5%;
 // $topbar-link-bg-hover: darken($topbar-bg, 3%);
 // $topbar-link-bg-active: darken($topbar-bg, 3%);
@@ -1283,8 +1335,19 @@ $topbar-link-hover-lightness: -5%;
 // $topbar-dropdown-label-font-weight: bold;
 // $topbar-dropdown-label-font-size: emCalc(10);
 
-// Top menu icon styles
 
+// ======== Dropdown ========
+$topbar-dropdown-bg: #eb8600;
+$topbar-dropdown-link-color: #feef74;
+// $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
+// $topbar-dropdown-toggle-size: 5px;
+// $topbar-dropdown-toggle-color: #fff;
+// $topbar-dropdown-toggle-alpha: 0.5;
+$topbar-dropdown-highlight: #ffa22e !default;
+$topbar-dropdown-shadow: #ca6900 !default;
+
+
+// ======== Menu ========
 $topbar-menu-link-transform: none;
 $topbar-menu-link-font-size: emCalc(16);
 $topbar-menu-link-weight: normal;
@@ -1293,17 +1356,29 @@ $topbar-menu-icon-color: #feef74;
 $topbar-menu-link-color-toggled: #feef74;
 $topbar-menu-icon-color-toggled: #feef74;
 
-// Transitions and breakpoint styles
 
+
+// ======== Search ========
+$topbar-search-bg: #eb8600 !default;
+$topbar-search-highlight: #ffc64c !default;
+$topbar-search-shadow: #ca6900 !default;
+
+
+
+// ======== Breakpoints ========
 // $topbar-transition-speed: 300ms;
-$topbar-breakpoint: emCalc(920);
-// $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
+$topbar-breakpoint: emCalc(780);
+$topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
+$topbar-large-breakpoint: emCalc(920);
+$topbar-large-media-query: "only screen and (min-width: #{$topbar-large-breakpoint})";
 
-// Divider Styles
 
+
+// ======== Dividers ========
 // $topbar-divider-border-bottom: solid 1px lighten($topbar-bg, 10%);
 // $topbar-divider-border-top: solid 1px darken($topbar-bg, 10%);
 
-// Sticky Class
 
+
+// ======== Sticky Class ========
 // $topbar-sticky-class: ".sticky";
