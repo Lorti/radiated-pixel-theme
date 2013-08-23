@@ -41,7 +41,7 @@
 <?php endwhile;?>
 </ul>
 
-<div class="bar">
+<div class="bar" style="margin-bottom: -1px">
 	<nav class="top-bar top-bar--radiated-pixel" role="navigation">
 		<ul class="title-area">
 		  <li class="name">

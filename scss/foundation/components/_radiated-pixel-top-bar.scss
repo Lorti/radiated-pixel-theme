@@ -27,10 +27,12 @@
   .top-bar-section {
     border-left: ($column-gutter / 2) solid $body-bg;
     border-right: ($column-gutter / 2) solid $body-bg;
+    margin-bottom: -1px; // A fix for the precision bug (thin orange line) on mobile phones.
 
     @media #{$topbar-media-query} {
       border-left-width: 0;
       border-right-width: 0;
+      margin-bottom: 0;
     }
   }
 
