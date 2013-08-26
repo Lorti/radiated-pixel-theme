@@ -224,9 +224,9 @@ $header-font-color: #f7a82e;
 
 // Style <code> tags
 
-// $code-color: darken($alert-color, 15%);
-// $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-// $code-font-weight: bold;
+$code-color: $body-font-color;
+$code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+$code-font-weight: normal;
 
 // Style anchors
 
@@ -238,13 +238,14 @@ $header-font-color: #f7a82e;
 
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
+$hr-border-color: #40454b;
 // $hr-margin: emCalc(20);
 
 // Style lists
 
 // $list-style-position: outside;
-// $list-side-margin: 0;
+$list-side-margin: emCalc(30);
+$list-bullet-size: .75;
 // $list-nested-margin: emCalc(20);
 // $definition-list-header-weight: bold;
 // $definition-list-header-margin-bottom: .3em;
@@ -254,7 +255,7 @@ $header-font-color: #f7a82e;
 
 // $blockquote-font-color: lighten($header-font-color, 30%);
 // $blockquote-padding: emCalc(9, 20, 0, 19);
-// $blockquote-border: 1px solid #ddd;
+$blockquote-border: none;
 // $blockquote-cite-font-size: emCalc(13);
 // $blockquote-cite-font-color: lighten($header-font-color, 20%);
 // $blockquote-cite-link-color: $blockquote-cite-font-color;

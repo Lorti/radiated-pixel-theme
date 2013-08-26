@@ -79,3 +79,49 @@
   font-weight: normal;
   font-style: normal;
 }
+
+// ======== Tags ========
+
+code {
+  display: inline-block;
+  padding: 0 .5em;
+  background-color: $hr-border-color;
+  @include border-radius(3px);
+}
+
+@mixin bullet {
+  $old-height: ($paragraph-font-size / $list-bullet-size) * $paragraph-line-height;
+  $new-height: 1em * $paragraph-line-height;
+
+  position: absolute;
+  top: ($old-height - $new-height) / 2;
+  left: -$list-side-margin / $list-bullet-size;
+  width: $new-height;
+  font-size: $paragraph-font-size * $list-bullet-size;
+}
+
+ol {
+  counter-reset: li;
+  & > li {
+    position: relative;
+    list-style-type: none;
+    &:before {
+      background: $primary-color;
+      content: counter(li, decimal);
+      counter-increment: li;
+      text-align: center;
+      @include bullet;
+    }
+  }
+}
+
+ul > li {
+  position: relative;
+  list-style-type: none;
+  &:before {
+    color: $primary-color;
+    content: '\25A0';
+    text-align: right;
+    @include bullet;
+  }
+}
