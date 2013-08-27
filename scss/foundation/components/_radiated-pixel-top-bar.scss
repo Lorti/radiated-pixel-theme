@@ -76,18 +76,14 @@
     }
 
     @media #{$topbar-large-media-query} {
-      .menu-item > a {
-        font-size: $topbar-link-font-size;
-      }
+      .menu-item > a { font-size: $topbar-link-font-size; }
     }
   }
 
 
 
   // ======== Logo ========
-  .name h1 a {
-    padding: ($column-gutter / 4) ($column-gutter / 2);
-  }
+  .name h1 a { padding: ($column-gutter / 4) ($column-gutter / 2); }
   .top-bar--radiated-pixel__logo-svg,
   .top-bar--radiated-pixel__logo-png {
     height: $topbar-height - convert-to-px($column-gutter / 2);

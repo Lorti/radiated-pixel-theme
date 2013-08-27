@@ -125,3 +125,20 @@ ul > li {
     @include bullet;
   }
 }
+
+// ======== Posts ========
+
+.entry-content {
+  a { border-bottom: 1px solid $primary-color; }
+  a:hover { border-bottom: none; }
+
+  & > p:first-of-type {
+    margin-top: $subheader-top-margin;
+    margin-bottom: $subheader-bottom-margin;
+    font-weight: $subheader-font-weight;
+    font-size: $h4-font-size;
+    font-family: $header-font-family;
+    line-height: $subheader-line-height;
+    text-rendering: $header-text-rendering;
+  }
+}
