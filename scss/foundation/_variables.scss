@@ -254,7 +254,7 @@ $list-bullet-size: .75;
 // Style blockquotes
 
 // $blockquote-font-color: lighten($header-font-color, 30%);
-// $blockquote-padding: emCalc(9, 20, 0, 19);
+$blockquote-padding: emCalc(9, 20, 0, 30);
 $blockquote-border: none;
 // $blockquote-cite-font-size: emCalc(13);
 // $blockquote-cite-font-color: lighten($header-font-color, 20%);
