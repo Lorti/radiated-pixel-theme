@@ -130,9 +130,6 @@ ul > li {
 // ======== Posts ========
 
 .entry-content {
-  a { border-bottom: 1px solid $primary-color; }
-  a:hover { border-bottom: none; }
-
   & > p:first-of-type {
     margin-top: $subheader-top-margin;
     margin-bottom: $subheader-bottom-margin;

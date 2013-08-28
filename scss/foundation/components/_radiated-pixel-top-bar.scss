@@ -53,6 +53,7 @@
       padding-left: ($column-gutter / 2);
       &:first-child > a { border-top-width: 0; }
       &:last-child > a { border-bottom-width: 0; }
+      &:before { display: none; }
     }
 
     @media #{$topbar-media-query} {

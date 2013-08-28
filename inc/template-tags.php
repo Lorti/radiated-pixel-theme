@@ -156,3 +156,11 @@ function rp_category_transient_flusher() {
 }
 add_action( 'edit_category', 'rp_category_transient_flusher' );
 add_action( 'save_post', 'rp_category_transient_flusher' );
+
+/**
+ * Regular expression function that replaces spaces between words with hyphens.
+ */
+function rp_create_slug($string) {
+   $slug = preg_replace('/[^A-Za-z]+/u', '-', $string);
+   return strtolower($slug);
+}
