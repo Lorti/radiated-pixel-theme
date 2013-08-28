@@ -207,8 +207,8 @@ $header-font-color: #f7a82e;
 
 // A general <small> styling
 
-// $small-font-size: 60%;
-// $small-font-color: lighten($header-font-color, 30%);
+$small-font-size: 87.5%;
+$small-font-color: lighten($header-font-color, 30%);
 
 // Style paragraphs
 
@@ -245,7 +245,7 @@ $hr-border-color: #40454b;
 
 // $list-style-position: outside;
 $list-side-margin: emCalc(30);
-$list-bullet-size: .8;
+$list-bullet-size: .75;
 // $list-nested-margin: emCalc(20);
 // $definition-list-header-weight: bold;
 // $definition-list-header-margin-bottom: .3em;
@@ -266,19 +266,19 @@ $blockquote-border: none;
 
 // Control padding and margin
 
-// $microformat-padding: emCalc(10, 12);
-// $microformat-margin: emCalc(0, 0, 20, 0);
+$microformat-padding: inherit;
+$microformat-margin: inherit;
 
 // Control the border styles
 
 // $microformat-border-width: 1px;
-// $microformat-border-style: solid;
+$microformat-border-style: none;
 // $microformat-border-color: #ddd;
 
 // Control full name font styles
 
-// $microformat-fullname-font-weight: bold;
-// $microformat-fullname-font-size: emCalc(15);
+$microformat-fullname-font-weight: normal;
+$microformat-fullname-font-size: inherit;
 
 // Control the summary font styles
 
@@ -935,9 +935,13 @@ $blockquote-border: none;
 
 // We use these to control the background and border styles
 
-// $panel-bg: darken(#fff, 5%);
+$panel-bg: #2a2d31;
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
+$panel-top-highlight-color: #9b5900;
+$panel-top-shadow-color: #24272c;
+$panel-bottom-shadow-color: #40454b;
+$panel-bottom-highlight-color: #1e2227;
 
 // We use this % to control how much we darken things on hover
 
@@ -1312,7 +1316,7 @@ $thumb-box-shadow-hover: none;
 
 $topbar-bg: #f7a82e;
 $topbar-height: 75px;
-// $topbar-margin-bottom: emCalc(30);
+$topbar-margin-bottom: emCalc(30);
 // $topbar-input-height: 2.45em;
 
 
