@@ -191,10 +191,11 @@
 
       @media #{$topbar-media-query} {
         padding-right: $column-gutter / 2;
-        background: $topbar-bg;
+        background: none;
         height: $topbar-height;
         display: table-cell;
         vertical-align: middle;
+        min-width: 220px; // "Looking for something?"
       }
     }
   }
