@@ -4,15 +4,15 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-	<header class="entry-header large-12 columns">
+	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'rp' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
 
 
-	<div class="panel panel--radiated-pixel large-12 columns">
+	<div class="panel panel--radiated-pixel row">
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta large-12 columns">

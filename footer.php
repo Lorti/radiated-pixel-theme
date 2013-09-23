@@ -22,7 +22,7 @@
         <div class="colophon__bubble">
           Having trouble with our new site?<br>
           You want to give us feedback?<br>
-          <span id="obf-feedback">Send a message to Manuel Wieser!</span>
+          <span id="feedback">Send a message to Manuel Wieser!</span>
         </div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/developer.png" alt="Manuel Wieser">
       </div>
@@ -43,16 +43,25 @@
 <script>
   jQuery(document).ready(function($) {
     $(document).foundation();
-    $('a[href="http://mailto"]').html('<n uers=\"znvygb:pbagnpg@enqvngrqcvkry.pbz\">pbagnpg@enqvngrqcvkry.pbz</n>'.replace(/[a-zA-Z]/g, function (c) {
+
+    $('a[href="http://mail"]').replaceWith('<n uers=\"znvygb:pbagnpg@enqvngrqcvkry.pbz\">pbagnpg@enqvngrqcvkry.pbz</n>'.replace(/[a-zA-Z]/g, function (c) {
       return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
     }));
-    $('#obf-feedback').html('<n uers=\"znvygb:bssvpr@znahryjvrfre.pbz?fhowrpg=Srrqonpx sbe Enqvngrq Cvkry\" gnetrg=\"_oynax\">Fraq n zrffntr gb Znahry Jvrfre!</n>'.replace(/[a-zA-Z]/g, function (c) {
+    $('#feedback').replaceWith('<n uers=\"znvygb:bssvpr@znahryjvrfre.pbz?fhowrpg=Srrqonpx sbe Enqvngrq Cvkry\" gnetrg=\"_oynax\">Fraq n zrffntr gb Znahry Jvrfre!</n>'.replace(/[a-zA-Z]/g, function (c) {
       return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
     }));
+
     $('.menu-item a').click(function() {
       $('.menu-item').removeClass('current-menu-item');
       $(this).parent().addClass('current-menu-item');
     });
+  });
+
+  jQuery(window).load(function() {
+    var firstTitle = jQuery('.post:first-child .entry-title');
+    var firstWidgetTitle = jQuery('.widget:first-child .widget-title');
+    firstWidgetTitle.css('marginTop', 0);
+    firstWidgetTitle.css('marginTop', firstTitle.outerHeight(true) - firstWidgetTitle.outerHeight(true));
   });
 </script>
 

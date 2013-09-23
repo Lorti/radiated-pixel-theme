@@ -6,13 +6,22 @@
 
 
 .post {
-  h1 { margin-bottom: 0; }
+  h1 {
+    margin-left: ($column-gutter / 2 / $h1-font-size) * 1em;
+    margin-bottom: $header-bottom-margin / 2;
+  }
 
   .panel {
-    margin-top: .25em;
     padding-left: 0;
     padding-right: 0;
   }
 
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .entry-meta:first-child { margin-bottom: 1em; }
+
+  margin-bottom: $column-gutter;
 }

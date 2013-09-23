@@ -4,8 +4,8 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-	<header class="entry-header large-12 columns">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
 		<h1 class="entry-title">
 			<a href="<?php the_permalink(); ?>">
 				<?php the_title(); ?>
@@ -13,7 +13,7 @@
 		</h1>
 	</header><!-- .entry-header -->
 
-	<div class="panel panel--radiated-pixel large-12 columns">
+	<div class="panel panel--radiated-pixel row">
 
 		<div class="entry-meta large-12 columns">
 			<small><?php rp_posted_on(); ?></small>

@@ -152,7 +152,7 @@ $primary-color: #f7a82e;
 //  Grid variables
 // ==========================================================================
 
-// $row-width: emCalc(1000);
+$row-width: emCalc(1024);
 // $column-gutter: emCalc(30);
 // $total-columns: 12;
 
@@ -190,12 +190,13 @@ $header-font-color: #f7a82e;
 
 // Control header font sizes
 
-// $h1-font-size: emCalc(44);
-// $h2-font-size: emCalc(37);
-// $h3-font-size: emCalc(27);
-// $h4-font-size: emCalc(23);
-// $h5-font-size: emCalc(18);
-// $h6-font-size: 1em;
+// http://modularscale.com/scale/?px1=16&px2=42&ra1=1.5&ra2=0
+$h1-font-size: emCalc(42);
+$h2-font-size: emCalc(36);
+$h3-font-size: emCalc(28);
+$h4-font-size: emCalc(24);
+$h5-font-size: emCalc(18);
+$h6-font-size: emCalc(16);
 
 // Control how subheaders are styled.
 
