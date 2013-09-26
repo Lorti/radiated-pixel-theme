@@ -142,6 +142,7 @@ function rp_scripts() {
 	// wp_enqueue_script( 'Foundation-section', get_template_directory_uri() . '/js/foundation/foundation.section.js', array(), '20130420', true );
 	// wp_enqueue_script( 'Foundation-tooltips', get_template_directory_uri() . '/js/foundation/foundation.tooltips.js', array(), '20130420', true );
 	wp_enqueue_script( 'Foundation-topbar', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', array(), '20130420', true );
+	wp_enqueue_script( 'Radiated Pixel', get_template_directory_uri() . '/js/main.js', array(), '20130926', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
