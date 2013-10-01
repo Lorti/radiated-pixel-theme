@@ -4,6 +4,14 @@
 // ==========================================================================
 
 
+
+.page-title {
+  margin-top: 0;
+  margin-bottom: strip-unit($header-bottom-margin) * $h3-font-size;
+  margin-left: ($column-gutter / 2 / $h3-font-size) * 1em;
+  font-size: $h3-font-size;
+}
+
 .hentry {
   h1 {
     margin-left: ($column-gutter / 2 / $h1-font-size) * 1em;
