@@ -20,7 +20,7 @@ jQuery(window).load(function() {
   var firstSidebarTitle = jQuery('.widget:first-of-type .widget-title');
 
   if (typeof firstContentPanel.offset() !== 'undefined') {
-    if (firstContentPanel.offset().top < jQuery('#primary').height()) {
+    if (firstSidebarPanel.offset().top < jQuery('#content').height()) {
       firstSidebarTitle.css('marginTop', 0);
       firstSidebarTitle.css('marginTop', firstContentPanel.offset().top - firstSidebarPanel.offset().top);
     }
