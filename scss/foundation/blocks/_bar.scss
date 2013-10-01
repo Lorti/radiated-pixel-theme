@@ -10,5 +10,3 @@ $bar-highlight: #fbb73d !default;
   background: $primary-color;
   @include box-shadow(inset 0 1px 0 $bar-highlight, inset 0 -1px 0 $bar-shadow);
 }
-
-

@@ -56,7 +56,6 @@
 		  </li>
 		  <li class="toggle-topbar menu-icon"><a href="#"><span></span><strong>Menu</strong></a></li>
 		</ul>
-
 		<section class="top-bar-section">
 			<?php wp_nav_menu(array(
 					'theme_location' => 'primary',
@@ -69,7 +68,15 @@
 			</ul>
 		</section>
 	</nav>
+	<div class="top-bar-tagline">
+		<div class="row">
+			<div class="large-12 columns">
+				<small><?php echo get_bloginfo ( 'description' );  ?></small>
+			</div>
+		</div>
+	</div>
 </div>
+
 
 <!-- microformats.org/wiki/hatom -->
 <div id="page" class="hfeed">
