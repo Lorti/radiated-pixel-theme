@@ -4,8 +4,7 @@
 // ==========================================================================
 
 
-
-.post {
+.hentry {
   h1 {
     margin-left: ($column-gutter / 2 / $h1-font-size) * 1em;
     margin-bottom: $header-bottom-margin / 2;
@@ -22,6 +21,10 @@
   }
 
   .entry-meta:first-child { margin-bottom: 1em; }
+  .entry-summary > p { margin-top: $paragraph-margin-bottom; }
+  @media #{$small} {
+    .entry-summary > p { margin-top: inherit; }
+  }
 
   margin-bottom: $column-gutter;
 }

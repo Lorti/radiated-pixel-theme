@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(window).load(function() {
-  var firstContentPanel = jQuery('.post:first-of-type .panel');
+  var firstContentPanel = jQuery('.hentry:first-of-type .panel');
   var firstSidebarPanel = jQuery('.widget:first-of-type ul');
   var firstSidebarTitle = jQuery('.widget:first-of-type .widget-title');
 
