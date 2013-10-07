@@ -7,32 +7,47 @@
 
 get_header(); ?>
 
-	<section id="primary" class="large-8 columns">
-		<div id="content" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( '<small>' . __( 'Search results for %s', 'rp' ), '</small><span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+			<section id="primary" class="large-8 columns">
+				<div id="content" role="main">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+					<header class="page-header">
+						<h1 class="page-title"><?php printf( '<small>' . __( 'Search results for %s', 'rp' ), '</small><span>' . get_search_query() . '</span>' ); ?></h1>
+					</header><!-- .page-header -->
 
-				<?php get_template_part( 'content', 'search' ); ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+						<?php get_template_part( 'content', 'search' ); ?>
 
-			<?php rp_content_nav( 'nav-below' ); ?>
+					<?php endwhile; ?>
+
+					<?php rp_content_nav( 'nav-below' ); ?>
+
+				</div><!-- #content -->
+			</section><!-- #primary -->
+
+			<?php get_sidebar(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'no-results', 'search' ); ?>
+			<section id="primary" class="large-12 columns">
+				<div id="content" role="main">
+
+					<article id="post-0" class="post error404 not-found">
+						<header class="entry-header">
+							<h1 class="entry-title"><?php _e( 'Sorry! Your search did not match any documents.', 'rp' ); ?></h1>
+						</header><!-- .entry-header -->
+
+						<div class="entry-content">
+							<p><?php _e( 'Please try different keywords and make sure that all words are spelled correctly.', 'rp' ); ?></p>
+						</div><!-- .entry-content -->
+					</article><!-- #post-0 .post .error404 .not-found -->
+
+				</div><!-- #content -->
+			</section><!-- #primary -->
 
 		<?php endif; ?>
 
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
