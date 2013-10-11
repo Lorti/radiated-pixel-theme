@@ -34,10 +34,6 @@
 
 
 
-<script>
-	document.write('<script src=' + ('__proto__' in {} ? '<?php echo get_template_directory_uri(); ?>/js/vendor/zepto' : '<?php echo get_template_directory_uri(); ?>/js/vendor/jquery') + '.js><\/script>');
-</script>
-
 <?php wp_footer(); ?>
 
 </body>
