@@ -71,6 +71,49 @@ function rp_setup() {
 	 * Enable support for Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+	/**
+	 * http://kendsnyder.com/posts/simple-and-effective-fix-for-the-wordpress-wpautop-madness
+	 */
+	add_filter('the_content', 'fix_autop');
+	add_filter('the_excerpt', 'fix_autop');
+
+	function fix_autop($content) {
+		$html = trim($content);
+		if ( $html === '' ) {
+			return '';
+		}
+		$blocktags = 'address|article|aside|audio|blockquote|canvas|caption|center|col|del|dd|div|dl|fieldset|figcaption|figure|footer|form|frame|frameset|h1|h2|h3|h4|h5|h6|header|hgroup|iframe|ins|li|nav|noframes|noscript|object|ol|output|pre|script|section|table|tbody|td|tfoot|thead|th|tr|ul|video';
+		$html = preg_replace('~<p>\s*<('.$blocktags.')\b~i', '<$1', $html);
+		$html = preg_replace('~</('.$blocktags.')>\s*</p>~i', '</$1>', $html);
+		return $html;
+	}
+
+	/**
+	 * http://foundation.zurb.com/docs/components/flex-video.html
+	 */
+	add_filter('the_content', 'flex_video');
+
+	function flex_video($content) {
+		$content = preg_replace('/<iframe.*?youtube.*?><\/iframe>/', '<div class="flex-video widescreen">$0</div>', $content);
+		$content = preg_replace('/<iframe.*?vimeo.*?><\/iframe>/', '<div class="flex-video vimeo widescreen">$0</div>', $content);
+		return $content;
+	}
+
+	/**
+	 * Headings receive an automatic anchor and a link to themselves.
+	 */
+	add_filter('the_content', 'add_anchors');
+
+	function add_anchors($content) {
+		preg_match_all('/<(h[0-6])>(.*?)<\/\1>/i', $content, $matches, PREG_SET_ORDER);
+		foreach ( $matches as $match ) {
+			$slug = rp_create_slug($match[2]);
+			$heading = sprintf('<%s id="%s"><a href="#%s">%s</a></%s>', $match[1], $slug, $slug, $match[2], $match[1]);
+			$content = str_replace($match[0], $heading, $content);
+		}
+		echo $content;
+	}
 }
 endif; // rp_setup
 add_action( 'after_setup_theme', 'rp_setup' );
