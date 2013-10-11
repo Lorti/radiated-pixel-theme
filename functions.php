@@ -170,7 +170,6 @@ add_action( 'widgets_init', 'rp_widgets_init' );
 function rp_scripts() {
 	wp_enqueue_style( 'Foundation-normalize', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'Foundation-style', get_template_directory_uri() . '/css/app.css' );
-	wp_enqueue_script( 'Foundation-jquery', get_template_directory_uri() . '/js/vendor/jquery.js' );
 	wp_enqueue_script( 'Foundation-modernizr', get_template_directory_uri() . '/js/vendor/custom.modernizr.js' );
   wp_enqueue_script( 'Foundation-foundation', get_template_directory_uri() . '/js/foundation/foundation.js', array(), '20130420', true );
 	// wp_enqueue_script( 'Foundation-alerts', get_template_directory_uri() . '/js/foundation/foundation.alerts.js', array(), '20130420', true );
@@ -193,3 +192,11 @@ function rp_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'rp_scripts' );
+
+// jQuery Insert From Google
+if (!is_admin()) add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
+function my_jquery_enqueue() {
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'http' . ($_SERVER['SERVER_PORT'] == 443 ? 's' : '') . '://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2' );
+	wp_enqueue_script('jquery');
+}
