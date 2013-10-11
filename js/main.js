@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
   });
 });
 
-jQuery(window).load(function() {
+function alignPanels() {
   var firstContentPanel = jQuery('.hentry:first-of-type .panel');
   var firstSidebarPanel = jQuery('.widget:first-of-type ul');
   var firstSidebarTitle = jQuery('.widget:first-of-type .widget-title');
@@ -25,4 +25,10 @@ jQuery(window).load(function() {
       firstSidebarTitle.css('marginTop', firstContentPanel.offset().top - firstSidebarPanel.offset().top);
     }
   }
+}
+
+jQuery(window).load(function() {
+  alignPanels();
+}).resize(function() {
+  alignPanels();
 });
