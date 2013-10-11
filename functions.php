@@ -112,7 +112,7 @@ function rp_setup() {
 			$heading = sprintf('<%s id="%s"><a href="#%s">%s</a></%s>', $match[1], $slug, $slug, $match[2], $match[1]);
 			$content = str_replace($match[0], $heading, $content);
 		}
-		echo $content;
+		return $content;
 	}
 }
 endif; // rp_setup
