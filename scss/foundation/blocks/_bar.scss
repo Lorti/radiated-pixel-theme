@@ -9,6 +9,17 @@ $bar-shadow: #eb8600 !default;
 $bar-highlight: #fbb73d !default;
 
 .bar {
+  position: relative;
   background: $primary-color;
   @include box-shadow(inset 0 1px 0 $bar-highlight, inset 0 -1px 0 $bar-shadow);
+}
+
+.bar--top-shadow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: -30px;
+  @include background(transparent linear-gradient(rgba($panel-bg, 0), rgba($panel-bg, 0.75)));
 }
