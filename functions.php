@@ -114,6 +114,42 @@ function rp_setup() {
 		}
 		return $content;
 	}
+
+	/**
+	 * Clementine daily and weekly highscores.
+	 * [clementineHighscores type='daily']
+	 * [clementineHighscores type='weekly']
+	 */
+	function clementine_highscores($atts) {
+		extract(shortcode_atts( array(
+			'type' => 'weekly',
+			'limit' => 25
+		), $atts));
+
+		if ($type == 'weekly') {
+			$table = 'clementine';
+			$time = date('Ymd', strtotime('this week'));
+		} else if ($type == 'daily') {
+			$table = 'clementinedaily';
+			$time = date('Ymd');
+		}
+		$query = sprintf('http://www.radiatedpixel.com/highscoresaver/gethighscores.php?table=%s&limit=%s&time=%s', $table, $limit, $time);
+		$contents = file_get_contents($query);
+		$contents = utf8_encode($contents);
+		$results = json_decode($contents, true);
+
+		$string = sprintf('<table>');
+		$string .= sprintf('<tr><th>#</th><th>Name</th><th>Score</th><th>Timestamp</th></tr>');
+		foreach($results as $entry) {
+			$string .= sprintf('<tr>');
+    	$string .= sprintf('<td>%s</td><td>%s</td><td>%s</td><td>%s</td>', $entry['rank'], explode('|' , $entry['name'])[1], $entry['score'], $entry['time']);
+    	$string .= sprintf('</tr>');
+  	}
+		$string .= sprintf('</table>');
+
+		return $string;
+	}
+	add_shortcode( 'clementineHighscores', 'clementine_highscores' );
 }
 endif; // rp_setup
 add_action( 'after_setup_theme', 'rp_setup' );
