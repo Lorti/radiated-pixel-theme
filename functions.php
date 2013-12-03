@@ -122,6 +122,7 @@ function rp_setup() {
 	 */
 	function clementine_highscores($atts) {
 		extract(shortcode_atts( array(
+			'message' => 'Nobody has played today. <strong>Play now, be the first and challenge your friends!</strong>',
 			'type' => 'weekly',
 			'limit' => 25
 		), $atts));
@@ -138,14 +139,19 @@ function rp_setup() {
 		$contents = utf8_encode($contents);
 		$results = json_decode($contents, true);
 
-		$string = sprintf('<table>');
-		$string .= sprintf('<tr><th>#</th><th>Name</th><th>Score</th><th>Timestamp</th></tr>');
-		foreach($results as $entry) {
-			$string .= sprintf('<tr>');
-    	$string .= sprintf('<td>%s</td><td>%s</td><td>%s</td><td>%s</td>', $entry['rank'], explode('|' , $entry['name'])[1], $entry['score'], $entry['time']);
-    	$string .= sprintf('</tr>');
-  	}
-		$string .= sprintf('</table>');
+		if (isset($results)) {
+			$string = sprintf('<table>');
+			$string .= sprintf('<tr><th>#</th><th>Name</th><th>Score</th><th>Timestamp</th></tr>');
+			foreach($results as $entry) {
+				$tokens = explode('|' , $entry['name']);
+				$string .= sprintf('<tr>');
+	    	$string .= sprintf('<td>%s</td><td>%s</td><td>%s</td><td>%s</td>', $entry['rank'], $tokens[1], $entry['score'], $entry['time']);
+	    	$string .= sprintf('</tr>');
+	  	}
+			$string .= sprintf('</table>');
+		} else {
+			$string = sprintf('<p>%s</p>', $message);
+		}
 
 		return $string;
 	}
