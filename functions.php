@@ -129,7 +129,7 @@ function rp_setup() {
 
 		if ($type == 'weekly') {
 			$table = 'clementine';
-			$time = date('Ymd', strtotime('this week'));
+			$time = date('Ymd', strtotime('Monday this week') - 24 * 60 * 60);
 		} else if ($type == 'daily') {
 			$table = 'clementinedaily';
 			$time = date('Ymd');
@@ -139,13 +139,14 @@ function rp_setup() {
 		$contents = utf8_encode($contents);
 		$results = json_decode($contents, true);
 
+		$string = sprintf('<!-- %s -->', $query);
 		if (isset($results)) {
-			$string = sprintf('<table>');
-			$string .= sprintf('<tr><th>#</th><th>Name</th><th>Score</th><th>Timestamp</th></tr>');
+			$string .= sprintf('<table>');
+			$string .= sprintf('<tr><th>#</th><th>Name</th><th>Score</th></tr>');
 			foreach($results as $entry) {
 				$tokens = explode('|' , $entry['name']);
 				$string .= sprintf('<tr>');
-	    	$string .= sprintf('<td>%s</td><td>%s</td><td>%s</td><td>%s</td>', $entry['rank'], $tokens[1], $entry['score'], $entry['time']);
+	    	$string .= sprintf('<td>%s</td><td>%s</td><td>%s</td><!-- %s -->', $entry['rank'], $tokens[1], $entry['score'], $entry['time']);
 	    	$string .= sprintf('</tr>');
 	  	}
 			$string .= sprintf('</table>');
